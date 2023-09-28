@@ -602,6 +602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643803580}
+  - component: {fileID: 1643803581}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -629,6 +630,24 @@ Transform:
   - {fileID: 2002710090}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1643803581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643803579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4ec6eab1af5fc4eb1af00dc61d4d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  themes:
+  - {fileID: 11400000, guid: 8d9787aaef15259438f4c1fca5872093, type: 2}
+  upperWall: {fileID: 1167964494}
+  lowerWall: {fileID: 1596023601}
+  upperFloor: {fileID: 1246953987}
+  lowerFloor: {fileID: 2002710089}
 --- !u!1 &2002222273
 GameObject:
   m_ObjectHideFlags: 0
