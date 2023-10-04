@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,13 +7,16 @@ public class ClickDragTest : MonoBehaviour
 {
 
 
-    //FIX ALL OF THIS TO BE ATTACHED TO THE THINGAMABOB YOU're
+    private bool dragging = false;
+
+    //offset to compensate for mouse clicking being weird
+    Vector3 mousePositionOffset;
 
 
+    //Stores the position something's at when you click it
+    Vector3 startingPosition = Vector3.zero;
 
-    //Stores the object this script is tied to
-
-    //Stores the object it's colliding with at the moment
+    //[SerializeField] GameObject cookingPot; 
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +27,10 @@ public class ClickDragTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        if (dragging)
+        {
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mousePositionOffset;
+        }
     }
 
 
@@ -31,32 +38,39 @@ public class ClickDragTest : MonoBehaviour
     {
 
         //"Grabs" what you're hovering over
+
+        //Stores start position
+        startingPosition = transform.position;
+        mousePositionOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        dragging = true;
     }
 
 
     private void OnMouseDrag()
     {
-        
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mousePositionOffset;
+
+
+
     }
 
     private void OnMouseUp()
     {
-        
-        //Pass heldObject into other collided object
-        
-
+        dragging = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void resetPosition()
     {
-
-        //Whenever you hover over an object with collision, this stores a reference to it
-        
-    }
-
-
-    private void OnCollisionExit(Collision collision)
-    {
-
+        transform.position = startingPosition;
     }
 }
+
+
+
+/*Questions for meeting
+ * 
+ * what do if player tries to cook when all storage spots are full?
+ * whad do if player tries to drop an object in the completely wrong place
+ * snapping to location when dropped?
+ * */
