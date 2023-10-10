@@ -6,77 +6,53 @@ using UnityEngine;
 public class holdingBay : MonoBehaviour
 {
 
-   public GameObject containedItem;
+    public GameObject containedItem;
+
+    public bool canChange; //Is this holding bay allowed to change during gameplay? Or should it remain the same?
 
     //checks if you are currently collided with an object
-    bool collided;
+    public bool collided;
 
     holdingBay collidedBay;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        print("I exist");
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    //Once player drops the item on this object, send the held item to the connected holding bay (if it is supposed to hold multiple items)
     private void OnMouseUp()
     {
-        
-        if (collided)
+        if (collided && collidedBay.canChange)
         {
-
-            print("OnMouseUp Proper");
-
             sendObject(collidedBay);
         }
-        
-
     }
     
+    //Whenever this collides with another object, check to see if it have a holding bay.
+    //If so, connect these two holding bays together so they can transfer to each other.
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("collided");
         try
         {
             collidedBay = collision.gameObject.GetComponent<holdingBay>();
-            
             collided = true;
-            print("got collidedBay");
         }
         catch (Exception a) { }
-
-        
-        
-        
     }
 
+    //When collision ends, undock from the other holding bay.
     private void OnCollisionExit2D(Collision2D collision)
     {
-
-        print("collision exit");
-
         collided = false;
+        collidedBay = null;
     }
-
+    
+    //Send object to the other holdingbay
     public void sendObject(holdingBay receivingBay)
     {
-        print("sendingObject");
-
         receivingBay.receiveObject(containedItem);
     }
 
     public void receiveObject(GameObject sentObject)
     {
-
-        print("receivingObject");
         containedItem = sentObject;
-
     }
 
     public void clearBay()
