@@ -11,7 +11,7 @@ public class holdingBay : MonoBehaviour
     public bool canChange; //Is this holding bay allowed to change during gameplay? Or should it remain the same?
 
     //checks if you are currently collided with an object
-    public bool collided;
+    private bool collided;
 
     holdingBay collidedBay;
 
@@ -27,7 +27,7 @@ public class holdingBay : MonoBehaviour
     
     //Whenever this collides with another object, check to see if it have a holding bay.
     //If so, connect these two holding bays together so they can transfer to each other.
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         try
         {
@@ -38,7 +38,7 @@ public class holdingBay : MonoBehaviour
     }
 
     //When collision ends, undock from the other holding bay.
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         collided = false;
         collidedBay = null;
