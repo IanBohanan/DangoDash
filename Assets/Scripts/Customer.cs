@@ -11,10 +11,23 @@ public class Customer : MonoBehaviour
 
     public bool isHappy = false;
 
+    public bool isSitting = false; //Is the customer currently at a table?
+
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        try
+        {
+            Table table = collision.gameObject.GetComponent<Table>();
+
+            isSitting = true;
+        }
+        catch (Exception a) { }
     }
 
     //Updates the timer every frame.

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RepBar : MonoBehaviour
 {
 
+    private Slider slider;  //The visible slider component of the reputation bar
     public int reputation = 100;
 
 
@@ -12,6 +14,13 @@ public class RepBar : MonoBehaviour
     private void OnEnable()
     {
         Customer.customerLeft += onCustomerLeave;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        slider = this.GetComponent<Slider>();
+        updateSlider();
     }
 
     //When object created (and enabled) unsubscribe to the customer when they left
@@ -32,15 +41,16 @@ public class RepBar : MonoBehaviour
         }
         else
         {
-            print("RepBar: Customer left restraunt! They were happy so reputation dropped!");
+            print("RepBar: Customer left restraunt! They were angry so reputation dropped!");
             reputation -= 10;
         }
+        updateSlider();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    //Updates the value in the slider so it matches the current reputation
+    private void updateSlider()
     {
-        
+        slider.value = reputation;
     }
 
     // Update is called once per frame
