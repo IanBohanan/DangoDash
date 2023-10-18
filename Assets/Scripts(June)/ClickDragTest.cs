@@ -67,6 +67,7 @@ public class ClickDragTest : MonoBehaviour
 
     public void resetPosition()
     {
+        print("tried resetting");
         transform.position = startingPosition;
     }
 }
