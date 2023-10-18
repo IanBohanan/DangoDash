@@ -1,0 +1,926 @@
+fileFormatVersion: 2
+guid: c057cc5aab8c0a148b818311fdc007c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2416037106476382268
+    second: sillyGoofysprites_0
+  - first:
+      213: 3067576057802332682
+    second: sillyGoofysprites_1
+  - first:
+      213: -1409729327328828356
+    second: sillyGoofysprites_2
+  - first:
+      213: -6523622411572999048
+    second: sillyGoofysprites_3
+  - first:
+      213: 2184994654890097293
+    second: sillyGoofysprites_4
+  - first:
+      213: -6219533423619255011
+    second: sillyGoofysprites_5
+  - first:
+      213: -2405217215507304996
+    second: sillyGoofysprites_6
+  - first:
+      213: 2248165278991312300
+    second: sillyGoofysprites_7
+  - first:
+      213: -8568913232296451813
+    second: sillyGoofysprites_8
+  - first:
+      213: -5470712917125434809
+    second: sillyGoofysprites_9
+  - first:
+      213: -2790718151673503961
+    second: sillyGoofysprites_10
+  - first:
+      213: -7782314455580746706
+    second: sillyGoofysprites_11
+  - first:
+      213: 3201710871518492860
+    second: sillyGoofysprites_12
+  - first:
+      213: -1270251955147479396
+    second: sillyGoofysprites_13
+  - first:
+      213: 5314561639609909137
+    second: sillyGoofysprites_14
+  - first:
+      213: -1598494004085454742
+    second: sillyGoofysprites_15
+  - first:
+      213: 3103516300996054481
+    second: sillyGoofysprites_16
+  - first:
+      213: 1723338091250792060
+    second: sillyGoofysprites_17
+  - first:
+      213: 3150771103517436635
+    second: sillyGoofysprites_18
+  - first:
+      213: -5036244864286823508
+    second: sillyGoofysprites_19
+  - first:
+      213: 8658447032667131445
+    second: sillyGoofysprites_20
+  - first:
+      213: 5229253490040356738
+    second: sillyGoofysprites_21
+  - first:
+      213: -3105889821714235367
+    second: sillyGoofysprites_22
+  - first:
+      213: 1188370141532630887
+    second: sillyGoofysprites_23
+  - first:
+      213: -1746958861138595492
+    second: sillyGoofysprites_24
+  - first:
+      213: 8731481114577122152
+    second: sillyGoofysprites_25
+  - first:
+      213: 257746341240718540
+    second: sillyGoofysprites_26
+  - first:
+      213: -6724957436289361241
+    second: sillyGoofysprites_27
+  - first:
+      213: 4842859309254705918
+    second: sillyGoofysprites_28
+  - first:
+      213: 2905390030371036125
+    second: sillyGoofysprites_29
+  - first:
+      213: -9082600388641019796
+    second: sillyGoofysprites_30
+  - first:
+      213: -3627328739004801409
+    second: sillyGoofysprites_31
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sillyGoofysprites_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 205
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c700586d03887ed0800000000000000
+      internalID: -2416037106476382268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 204
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a1dcefb28329a20800000000000000
+      internalID: 3067576057802332682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 187
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c346d1755a2af6ce0800000000000000
+      internalID: -1409729327328828356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 194
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c0a65faff6775a0800000000000000
+      internalID: -6523622411572999048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_4
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 215
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8af9d0ef09a25e10800000000000000
+      internalID: 2184994654890097293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 196
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d155180cd47cfa9a0800000000000000
+      internalID: -6219533423619255011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_6
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 201
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd68069fa3fe9ed0800000000000000
+      internalID: -2405217215507304996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_7
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 201
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5e4a2f866133f10800000000000000
+      internalID: 2248165278991312300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_8
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 202
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1163d5b0da151980800000000000000
+      internalID: -8568913232296451813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 163
+        width: 38
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742f892469f1414b0800000000000000
+      internalID: -5470712917125434809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_10
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 163
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f144d70a06549d0800000000000000
+      internalID: -2790718151673503961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 163
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cd8b03c3aaff390800000000000000
+      internalID: -7782314455580746706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_12
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 164
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8bd520313ce6c20800000000000000
+      internalID: 3201710871518492860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_13
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 176
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96603ea3982f5ee0800000000000000
+      internalID: -1270251955147479396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_14
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 176
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fbdd947ad11c940800000000000000
+      internalID: 5314561639609909137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_15
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 174
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6805e62c2201d9e0800000000000000
+      internalID: -1598494004085454742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_16
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 174
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd0183f1a7e11b20800000000000000
+      internalID: 3103516300996054481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 121
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7637e40dd68ae710800000000000000
+      internalID: 1723338091250792060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_18
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 118
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdae8b900a9c9bb20800000000000000
+      internalID: 3150771103517436635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_19
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 121
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab6c46aaf9ab1ab0800000000000000
+      internalID: -5036244864286823508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_20
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 121
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ec8a8a3bbf82870800000000000000
+      internalID: 8658447032667131445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fb35ae75a029840800000000000000
+      internalID: 5229253490040356738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_22
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 144
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 910c831b9a9a5e4d0800000000000000
+      internalID: -3105889821714235367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_23
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 146
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76fabb3f850fd7010800000000000000
+      internalID: 1188370141532630887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_24
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 146
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51fc9ceb2e81c7e0800000000000000
+      internalID: -1746958861138595492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863b665ffc37c2970800000000000000
+      internalID: 8731481114577122152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_26
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 85
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc44fc78ee2b39300800000000000000
+      internalID: 257746341240718540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_27
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 88
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aad95097d62ca2a0800000000000000
+      internalID: -6724957436289361241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_28
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 100
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2025912ea453340800000000000000
+      internalID: 4842859309254705918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_29
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 101
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb1a36d6d4025820800000000000000
+      internalID: 2905390030371036125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_30
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 102
+        width: 49
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c682a36711f14f180800000000000000
+      internalID: -9082600388641019796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_31
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 107
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e9d04fab329adc0800000000000000
+      internalID: -3627328739004801409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sillyGoofysprites_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 140
+        width: 179
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec1bb4a121f8354186e89cde69424d6
+      internalID: 1643491008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: eeae3ab9a0f0a7640a0242d346d0eb82
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sillyGoofysprites_32: 1643491008
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
