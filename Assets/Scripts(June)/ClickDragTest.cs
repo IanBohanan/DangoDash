@@ -33,6 +33,11 @@ public class ClickDragTest : MonoBehaviour
         }
     }
 
+    public bool isBeingDragged()
+    {
+        return dragging;
+    }
+
 
     private void OnMouseDown()
     {
