@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 3b6f008410189f944a6592ffba08cd11
+guid: 1437fd1f6fe68c74086c240fd302b56b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3693028216693359592
-    second: Kitty_0
+      213: -3590035899181008870
+    second: Cats_0
+  - first:
+      213: 3311164127380321578
+    second: Cats_1
+  - first:
+      213: -4654336412095921189
+    second: Cats_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -48,7 +54,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -98,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kitty_0
+      name: Cats_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 1
-        width: 59
-        height: 56
+        x: 0
+        y: 0
+        width: 29
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +118,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81c7f76476abfbcc0800000000000000
-      internalID: -3693028216693359592
+      spriteID: a187a6ade51ad2ec0800000000000000
+      internalID: -3590035899181008870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 3
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2535850b3e93fd20800000000000000
+      internalID: 3311164127380321578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cats_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 3
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd34bd361b9786fb0800000000000000
+      internalID: -4654336412095921189
       vertices: []
       indices: 
       edges: []
@@ -129,7 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Kitty_0: -3693028216693359592
+      Cats_0: -3590035899181008870
+      Cats_1: 3311164127380321578
+      Cats_2: -4654336412095921189
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Restaurant
+  - Customers
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3790301225
+    locked: 0
+  - name: Furniture
+    uniqueID: 2032688687
+    locked: 0
+  - name: Customers
+    uniqueID: 2008840105
+    locked: 0
+  - name: Food
+    uniqueID: 2809885305
     locked: 0
