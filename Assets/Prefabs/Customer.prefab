@@ -292,12 +292,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eeeb6cc76eb56b479baab6079153e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredFood: 0
+  spotInLine: 0
   lineTimer: 10
   tableTimer: 20
   timeLeft: 5
   isHappy: 0
   thinkCloud: {fileID: 176548880594296332}
+  foodDisplay: {fileID: 8111809494348503429}
   state: 0
 --- !u!114 &9134621474532618730
 MonoBehaviour:
@@ -335,8 +336,9 @@ GameObject:
   m_Component:
   - component: {fileID: 121148292174427581}
   - component: {fileID: 7524878246785355763}
+  - component: {fileID: 8111809494348503429}
   m_Layer: 0
-  m_Name: Food
+  m_Name: FoodIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,3 +411,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8111809494348503429
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8037778140904053257}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3813270697e565646aeb1144ebe703db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

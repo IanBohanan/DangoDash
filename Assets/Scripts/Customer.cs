@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using System.Linq;
+
 public class Customer : MonoBehaviour
 {
 
@@ -10,7 +10,9 @@ public class Customer : MonoBehaviour
 
     public int spotInLine; //Which spot in line did this customer take when it spawned?
 
-    public foodName desiredFood; //What food does this customer want?
+    private Food desiredFood = new Food(); //What food does this customer want?
+
+    public foodName debugfoodname;
 
     public float lineTimer = 10.0f; //Time until customer leaves after entering store
 
@@ -30,6 +32,8 @@ public class Customer : MonoBehaviour
 
     [SerializeField]
     private GameObject thinkCloud; //The cloud that shows what the customer wants
+    [SerializeField]
+    private Animator foodDisplay; //The animator that displays the desired food object
 
     public enum CustomerState
     {
@@ -64,11 +68,11 @@ public class Customer : MonoBehaviour
         catch (Exception a) { }
     }
 
-    //Generates a random food value from the foodName enum
-    //TODO: This might miss the last value in the enum array? Be sure to check
+    //Generates a random food for the desired food, then set the foodCloud's desiredFood icon to the generated food
     private void generateFood()
     {
-        desiredFood = (foodName)UnityEngine.Random.Range(0, Enum.GetValues(typeof(foodName)).Cast<int>().Max());
+        desiredFood.generateName();
+        debugfoodname = desiredFood.name;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -121,14 +125,15 @@ public class Customer : MonoBehaviour
     //and displays what food they want
     private void sitAtTable(Table table)
     {
+        print("Customer: I sat at the table!");
         leftLine?.Invoke(spotInLine); //Tell the CustomerSpawner its sat down and it should free the spot in line
         this.transform.position = curTable.transform.Find("LeftChair").transform.position;
-        print("Customer: I sat at the table!");
         state = CustomerState.SEATED;
         table.seatCustomer();
         timeLeft = tableTimer;
-        Destroy(GetComponent<ClickDragTest>()); //Customer should not be dragged anymore after this.
+        Destroy(GetComponent<ClickDragTest>()); //Customer should not be dragged anymore after this. So destroy ability yo drag
         thinkCloud.SetActive(true);
+        foodDisplay.SetInteger("FoodNum", (int)desiredFood.name); //Display the correct food above their head
     }
 
     //Updates the timer every frame.
