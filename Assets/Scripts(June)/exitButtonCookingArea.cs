@@ -10,10 +10,13 @@ public class exitButtonCookingArea : MonoBehaviour
     [SerializeField]
     private GameObject cookingArea;
 
+    public SpriteRenderer exampleAnim;
+
     private void OnMouseDown()
     {
         cookingArea.SetActive(false);
         tables.SetActive(true);
+        exampleAnim.sprite = null;
     }
 
 
