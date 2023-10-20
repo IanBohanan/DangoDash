@@ -5,6 +5,8 @@ using UnityEngine;
 public class Table : MonoBehaviour
 {
 
+    private Customer seatedCustomer; //What customer is seated at this table?
+
     public enum TableState
     {
         EMPTY, //Table is waiting for customer
@@ -14,15 +16,22 @@ public class Table : MonoBehaviour
 
     public TableState state = TableState.EMPTY;
 
-    public void seatCustomer()
+    public void seatCustomer(Customer r_customer)
     {
         state = TableState.SEATED;
+        seatedCustomer = r_customer;
+    }
+
+    public void receiveFood(Food food)
+    {
+        seatedCustomer.eat(food);
     }
 
     // Start is called before the first frame update
-    void Start()
+    public void free()
     {
-        
+        print("Table: I am free!");
+        state = TableState.EMPTY;
     }
 
     // Update is called once per frame
