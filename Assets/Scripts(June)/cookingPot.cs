@@ -12,9 +12,9 @@ public class cookingPot : MonoBehaviour
 
     //make all ingredientValues prime numbers for ease of addition
 
-    int ingredientCount = 0;
+    public int ingredientCount = 0;
 
-    int ingredientValue = 0;
+    public int ingredientValue = 0;
 
     [SerializeField] holdingBay connectedBay;
 
@@ -43,9 +43,6 @@ public class cookingPot : MonoBehaviour
 
     public void addIngredient(GameObject ingredient)
     {
-
-        //math stuff
-        Debug.Log("got item");
 
         //checks for what ingredient was passed in
         //for now, this is done by object name, there's probably a better way to do this but it's functional for now
@@ -118,13 +115,8 @@ public class cookingPot : MonoBehaviour
     //I still need the cookbook/recipes to add everything to this
     public void mixIngredients()
     {
-
         //might change this to switch statements whenever time allows, for sake of clarity
-
-
         //checks for overall ingredientValue and produces a food accordingly
-
-
         //example: flour + chocolate + milk = taiyaki
         if (ingredientValue == 139)
         {
@@ -143,7 +135,7 @@ public class cookingPot : MonoBehaviour
 
         //if set of ingredients isn't in list
         else
-        {
+        { 
             outputFood?.Invoke(foodName.TRASH);
 
         }

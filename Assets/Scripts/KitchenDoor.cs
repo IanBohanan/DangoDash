@@ -2,26 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class exitButtonCookingArea : MonoBehaviour
+public class KitchenDoor : MonoBehaviour
 {
-
     [SerializeField]
     private Animator kitchenArea;
 
     [SerializeField]
     private GameObject tables;
-
+    //When clicked, transition
     private void OnMouseDown()
     {
-        kitchenArea.Play("MoveDown");
-        tables.SetActive(true);
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        kitchenArea.Play("MoveUp");
+        tables.SetActive(false);
     }
 
     // Update is called once per frame
