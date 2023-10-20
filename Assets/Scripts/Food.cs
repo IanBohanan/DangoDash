@@ -12,7 +12,8 @@ public enum foodName
     CATBISCUITS,
     CATBOX,
     FULLFISH,
-    THICKDRINK
+    THICKDRINK,
+    TRASH
 }
 
 public class Food : MonoBehaviour
