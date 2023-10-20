@@ -6,7 +6,6 @@ using UnityEngine;
 public class ClickDragTest : MonoBehaviour
 {
 
-
     private bool dragging = false;
 
     //offset to compensate for mouse clicking being weird
@@ -14,14 +13,14 @@ public class ClickDragTest : MonoBehaviour
 
 
     //Stores the position something's at when you click it
-    Vector3 startingPosition = Vector3.zero;
+    private Vector3 lastValidCoords;
 
     //[SerializeField] GameObject cookingPot; 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        lastValidCoords = transform.position;
     }
 
     // Update is called once per frame
@@ -41,34 +40,32 @@ public class ClickDragTest : MonoBehaviour
 
     private void OnMouseDown()
     {
-
         //"Grabs" what you're hovering over
 
         //Stores start position
-        startingPosition = transform.position;
+        //lastValidCoords = transform.position;
         mousePositionOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         dragging = true;
     }
 
 
     private void OnMouseDrag()
     {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mousePositionOffset;
-
-
-
+        if(dragging)
+        {
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mousePositionOffset;
+        }
     }
 
     private void OnMouseUp()
     {
+        transform.position = lastValidCoords;
         dragging = false;
     }
 
     public void resetPosition()
     {
-        print("tried resetting");
-        transform.position = startingPosition;
+        transform.position = lastValidCoords;
     }
 }
 

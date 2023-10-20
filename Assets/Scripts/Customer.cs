@@ -8,6 +8,8 @@ public class Customer : MonoBehaviour
 
     public static event Action<int> leftLine; //Event signal when customer leaves the line. Sent out: int which spot in line they were
 
+    public static event Action<bool> customerLeft; //Action that shows customer left. Bool - was the customer happy when they left?
+
     public int spotInLine; //Which spot in line did this customer take when it spawned?
 
     private Food desiredFood = new Food(); //What food does this customer want?
@@ -19,8 +21,6 @@ public class Customer : MonoBehaviour
     public float tableTimer = 20.0f; //Time until customer leaves after being seated
 
     public float timeLeft; //Time in seconds until something happens
-
-    public static event Action<bool> customerLeft; //Action that shows customer left. Bool - was the customer happy when they left?
 
     public bool isHappy = false;
 

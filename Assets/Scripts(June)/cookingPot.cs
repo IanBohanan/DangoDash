@@ -12,9 +12,9 @@ public class cookingPot : MonoBehaviour
 
     //make all ingredientValues prime numbers for ease of addition
 
-    int ingredientCount = 0;
+    public int ingredientCount = 0;
 
-    int ingredientValue = 0;
+    public int ingredientValue = 0;
 
     [SerializeField] holdingBay connectedBay;
 
@@ -30,20 +30,19 @@ public class cookingPot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (connectedBay.containedItem != null)
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    { 
+        if(collision.gameObject.GetComponent<ClickDragTest>())
         {
-            //If the bay is not empty, pull the ingredient stored within into the pot
-            addIngredient(connectedBay.containedItem);
+            addIngredient(collision.gameObject);
         }
-
-
     }
 
     public void addIngredient(GameObject ingredient)
     {
-
-        //math stuff
-        Debug.Log("got item");
 
         //checks for what ingredient was passed in
         //for now, this is done by object name, there's probably a better way to do this but it's functional for now
@@ -93,13 +92,14 @@ public class cookingPot : MonoBehaviour
 
         ingredientCount += 1;
 
-
-
-
         //moves the ingredient back to its spot on the shelf
-        ingredientMove = ingredient.GetComponent<ClickDragTest>();
+        try
+        {
+            ingredientMove = ingredient.GetComponent<ClickDragTest>();
+            ingredientMove.resetPosition();
+        }
+        catch (Exception e) { };
 
-        ingredientMove.resetPosition();
 
         //removes the ingredient from the bay
         connectedBay.clearBay();
@@ -115,13 +115,8 @@ public class cookingPot : MonoBehaviour
     //I still need the cookbook/recipes to add everything to this
     public void mixIngredients()
     {
-
         //might change this to switch statements whenever time allows, for sake of clarity
-
-
         //checks for overall ingredientValue and produces a food accordingly
-
-
         //example: flour + chocolate + milk = taiyaki
         if (ingredientValue == 139)
         {
@@ -141,7 +136,7 @@ public class cookingPot : MonoBehaviour
 
         //if set of ingredients isn't in list
         else
-        {
+        { 
             outputFood?.Invoke(foodName.TRASH);
 
         }
@@ -149,13 +144,6 @@ public class cookingPot : MonoBehaviour
         ingredientCount = 0;
 
         ingredientValue = 0;
-
-
-
-
-
-
-
 
 
     }
