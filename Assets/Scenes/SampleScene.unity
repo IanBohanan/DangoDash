@@ -995,38 +995,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1158199744
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158199743}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6026472011172458779}
-  - {fileID: 1745452142751554597}
-  - {fileID: 3791611733625154223}
-  - {fileID: 5284625428463934079}
-  - {fileID: 388161907552386185}
-  - {fileID: 7928624856132200187}
-  - {fileID: 4997955914969747861}
-  - {fileID: 6938100209773643984}
-  - {fileID: 4855467492731772703}
-  - {fileID: 4353790022920494423}
-  - {fileID: 5489395572040640285}
-  - {fileID: 6548946467582796267}
-  m_Father: {fileID: 2676349329591877526}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 183.33, y: 123.28689}
-  m_SizeDelta: {x: 807.6, y: 414}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1158199745n
+--- !u!114 &1093706283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
