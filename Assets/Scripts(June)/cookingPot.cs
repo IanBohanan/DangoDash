@@ -34,8 +34,11 @@ public class cookingPot : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        addIngredient(collision.gameObject);
+    { 
+        if(collision.gameObject.GetComponent<ClickDragTest>())
+        {
+            addIngredient(collision.gameObject);
+        }
     }
 
     public void addIngredient(GameObject ingredient)
@@ -92,13 +95,14 @@ public class cookingPot : MonoBehaviour
 
         ingredientCount += 1;
 
-
-
-
         //moves the ingredient back to its spot on the shelf
-        ingredientMove = ingredient.GetComponent<ClickDragTest>();
+        try
+        {
+            ingredientMove = ingredient.GetComponent<ClickDragTest>();
+            ingredientMove.resetPosition();
+        }
+        catch (Exception e) { };
 
-        ingredientMove.resetPosition();
 
         //removes the ingredient from the bay
         connectedBay.clearBay();
@@ -147,13 +151,6 @@ public class cookingPot : MonoBehaviour
         ingredientCount = 0;
 
         ingredientValue = 0;
-
-
-
-
-
-
-
 
 
     }
