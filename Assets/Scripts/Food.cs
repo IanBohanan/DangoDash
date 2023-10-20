@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
 
 public enum foodName
 {
@@ -10,21 +12,23 @@ public enum foodName
     CATBISCUITS,
     CATBOX,
     FULLFISH,
-    THICKDRINK
+    THICKDRINK,
+    TRASH
 }
 
 public class Food : MonoBehaviour
 {
-    foodName name = foodName.ICECREAM;
-    // Start is called before the first frame update
-    void Start()
+    public foodName name;
+
+    //Generates a random food for the desired food
+    //Todo: test if this misses the last food icon? Might be one off?
+    public void generateName()
     {
-        
+        name = (foodName)UnityEngine.Random.Range(0, Enum.GetValues(typeof(foodName)).Cast<int>().Max());
     }
 
-    // Update is called once per frame
-    void Update()
+    public void setName(foodName r_name)
     {
-        
+        name = r_name;
     }
 }
