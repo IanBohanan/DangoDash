@@ -11,6 +11,10 @@ public class cookingAreaOpen : MonoBehaviour
 
     public SpriteRenderer renderer;
 
+    public Sprite bobaSprite;
+    public Sprite taiyakiSprite;
+    public Sprite trashSprite;
+
     //When object created (and enabled) subscribe to the customer's leaving
     private void OnEnable()
     {
@@ -29,9 +33,21 @@ public class cookingAreaOpen : MonoBehaviour
     {
         renderer.enabled = true;
         //Reset the food animator to the entry state
-        foodAnim.Rebind();
-        foodAnim.Update(0f);
-        foodAnim.SetInteger("FoodNum", (int)food); //Display the correct food
+        
+        switch(food)
+        {
+            case foodName.BOBA:
+                renderer.sprite = bobaSprite;
+                break;
+            case foodName.TAIYAKI:
+                renderer.sprite = taiyakiSprite;
+                break;
+            default:
+                renderer.sprite = trashSprite;
+                break;
+        }
+
+        foodAnim.Play("FlyOut");
     }
 
 }

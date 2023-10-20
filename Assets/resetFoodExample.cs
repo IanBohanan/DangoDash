@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;using UnityEngine;
+using System.Collections.Generic;
 
 public class resetFoodExample : StateMachineBehaviour
 {
@@ -8,10 +9,16 @@ public class resetFoodExample : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetInteger("FoodNum", -1); //Display nothing
+        animator.enabled = false;
+    }
+
+    public void reset()
+    {
+       
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)s
     //{
     //    
     //}
