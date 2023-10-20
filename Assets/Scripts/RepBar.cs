@@ -16,12 +16,6 @@ public class RepBar : MonoBehaviour
         Customer.customerLeft += onCustomerLeave;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        slider = this.GetComponent<Slider>();
-        updateSlider();
-    }
 
     //When object created (and enabled) unsubscribe to the customer when they left
     //Very important or else errors will happen!
@@ -29,6 +23,14 @@ public class RepBar : MonoBehaviour
     {
         Customer.customerLeft -= onCustomerLeave;
     }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        slider = this.GetComponent<Slider>();
+        updateSlider();
+    }
+
 
     //Triggered when a customer leaves the restraunt.
     //Params: bool wasHappy - was the customer satisfied when they left?

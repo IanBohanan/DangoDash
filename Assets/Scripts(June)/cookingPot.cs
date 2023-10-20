@@ -6,6 +6,10 @@ using UnityEngine.Events;
 public class cookingPot : MonoBehaviour
 {
 
+
+    //prototype for unity actions
+
+    public static event Action<foodName> outputFood;
     //General Idea: pull from the pot's holdingBay, add that to an overall value, from there determine the food that's exported
 
     //tracks the number of ingredients currently in the pot; when this hits 3, a food is made
@@ -121,7 +125,7 @@ public class cookingPot : MonoBehaviour
         if (ingredientValue == 139)
         {
 
-            outputFood?.Invoke(foodName.BOBA);
+            outputFood?.Invoke(foodName.TAIYAKI);
         }
 
         //mochi + flour + strawberry = Strawberry Mochi
@@ -149,10 +153,6 @@ public class cookingPot : MonoBehaviour
     }
 
 
-
-    //prototype for unity actions
-
-    public static event Action<foodName> outputFood;
 
 
 
