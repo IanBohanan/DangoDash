@@ -25,6 +25,7 @@ public class Table : MonoBehaviour
     public void receiveFood(Food food)
     {
         seatedCustomer.eat(food);
+        free();
     }
 
     // Start is called before the first frame update
