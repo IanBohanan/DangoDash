@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ClickDragTest : MonoBehaviour
 {
+    public bool autoReturn = true;
 
     public bool autoReturn = true;
 

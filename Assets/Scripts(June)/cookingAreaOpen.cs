@@ -9,5 +9,4 @@ public class cookingAreaOpen : MonoBehaviour
     //stores the cookingArea to open/close
     public GameObject cookArea;
 
-
 }

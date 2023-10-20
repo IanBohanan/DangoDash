@@ -499,6 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 1
 --- !u!114 &7479967649451306226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,6 +886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 1
 --- !u!114 &5018341651471912181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,7 +927,7 @@ Transform:
   m_GameObject: {fileID: 4230443770796370197}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9022437, y: 1.2107004, z: -0.046561416}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -945,7 +947,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookArea: {fileID: 291883905401400232}
-  exitButton: {fileID: 985146665641068005}
 --- !u!1 &4546346908975177387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +1255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 1
 --- !u!1 &7542148228120577343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,6 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 1
 --- !u!114 &5353663452233592528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1628,6 +1631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 1
 --- !u!114 &3600972646623861250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1742,6 +1746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 1
 --- !u!114 &5121875681058735261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1943,6 +1948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fa18f729ed8934e94fadd32086f6f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredientCount: 0
+  ingredientValue: 0
   connectedBay: {fileID: 5667144826920800958}
 --- !u!50 &4343742000963300352
 Rigidbody2D:

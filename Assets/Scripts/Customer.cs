@@ -8,8 +8,6 @@ public class Customer : MonoBehaviour
 
     public static event Action<int> leftLine; //Event signal when customer leaves the line. Sent out: int which spot in line they were
 
-    public static event Action<bool> customerLeft; //Action that shows customer left. Bool - was the customer happy when they left?
-
     public int spotInLine; //Which spot in line did this customer take when it spawned?
 
     private Food desiredFood = new Food(); //What food does this customer want?
@@ -21,6 +19,8 @@ public class Customer : MonoBehaviour
     public float tableTimer = 20.0f; //Time until customer leaves after being seated
 
     public float timeLeft; //Time in seconds until something happens
+
+    public static event Action<bool> customerLeft; //Action that shows customer left. Bool - was the customer happy when they left?
 
     public bool isHappy = false;
 
@@ -47,6 +47,7 @@ public class Customer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         generateFood();
         timeLeft = lineTimer;
         lastValidCoords = transform.position;
@@ -63,7 +64,7 @@ public class Customer : MonoBehaviour
             {
                 curTable = hitObject;
             }
-            
+
         }
         catch (Exception a) { }
     }
@@ -79,11 +80,11 @@ public class Customer : MonoBehaviour
     {
         try
         {
-            if(collision.transform.gameObject.GetComponent<Table>())
+            if (collision.transform.gameObject.GetComponent<Table>())
             {
                 curTable = null;
             }
-            
+
         }
         catch (Exception a) { }
     }
@@ -96,7 +97,7 @@ public class Customer : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if(dragScript.isBeingDragged())
+        if (dragScript.isBeingDragged())
         {
             try //If the customer was over a table, then sit the customer there
             {
@@ -114,7 +115,7 @@ public class Customer : MonoBehaviour
                     tweenToLocation(lastValidCoords);
                     curTable = null;
                 }
-                
+
 
             }
             catch (Exception a) //If the customer was over a non-table
@@ -145,7 +146,7 @@ public class Customer : MonoBehaviour
     {
         print("Customer: I received a " + food.name);
 
-        if(food.name.Equals(desiredFood.name))
+        if (food.name.Equals(desiredFood.name))
         {
             isHappy = true;
         }
@@ -185,10 +186,10 @@ public class Customer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(state != CustomerState.FED)
+        if (state != CustomerState.FED)
         {
             updateTimer();
         }
-        
+
     }
 }
