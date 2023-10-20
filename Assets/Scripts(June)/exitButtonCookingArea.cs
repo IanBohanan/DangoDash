@@ -6,14 +6,13 @@ public class exitButtonCookingArea : MonoBehaviour
 {
 
     [SerializeField]
-    private Animator kitchenArea;
-
-    [SerializeField]
     private GameObject tables;
+    [SerializeField]
+    private GameObject cookingArea;
 
     private void OnMouseDown()
     {
-        kitchenArea.Play("MoveDown");
+        cookingArea.SetActive(false);
         tables.SetActive(true);
     }
 
@@ -21,12 +20,12 @@ public class exitButtonCookingArea : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

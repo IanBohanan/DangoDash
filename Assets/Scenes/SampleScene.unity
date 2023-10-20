@@ -957,28 +957,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7329477270537653139, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
   m_PrefabInstance: {fileID: 856537158}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &797805751
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797805748}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e72e5f097b4cc1c408350a98659cdc65, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &850967175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1504520880017555541, guid: 353cc3cb366599a4499959e356a35351, type: 3}
@@ -1041,9 +1019,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2010579118}
     - target: {fileID: 2358584045843112000, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
+      propertyPath: cookingArea
+      value: 
+      objectReference: {fileID: 797805748}
+    - target: {fileID: 2358584045843112000, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: kitchenArea
       value: 
-      objectReference: {fileID: 797805751}
+      objectReference: {fileID: 0}
     - target: {fileID: 3317244813376339356, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_SortingLayer
       value: 6
@@ -1106,7 +1088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329477270537653139, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7396255055473561648, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1114,7 +1096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7396255055473561648, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.75
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 7396255055473561648, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1165,9 +1147,6 @@ PrefabInstance:
       insertIndex: 4
       addedObject: {fileID: 1802510164}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7329477270537653139, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 797805751}
     - targetCorrespondingSourceObject: {fileID: 6883648448955175619, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       insertIndex: -1
       addedObject: {fileID: 856537160}
@@ -2665,7 +2644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743d745e045d1b84586df98af5fd0935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenArea: {fileID: 797805751}
+  kitchenArea: {fileID: 797805748}
   tables: {fileID: 2010579118}
 --- !u!1 &2051162464
 GameObject:
@@ -7397,3 +7376,4 @@ SceneRoots:
   - {fileID: 2010579119}
   - {fileID: 856537158}
   - {fileID: 2016989516}
+  - {fileID: 68655890}
