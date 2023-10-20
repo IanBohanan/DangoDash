@@ -4,9 +4,13 @@ using UnityEngine;
 
 public enum foodName
 {
-    CRAB,
-    ICECREAM,
-    RICE
+    BOBA,
+    BROKENFISH,
+    CATBAG,
+    CATBISCUITS,
+    CATBOX,
+    FULLFISH,
+    THICKDRINK
 }
 
 public class Food : MonoBehaviour
