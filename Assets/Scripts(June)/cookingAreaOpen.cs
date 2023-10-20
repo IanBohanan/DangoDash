@@ -10,11 +10,11 @@ public class cookingAreaOpen : MonoBehaviour
     public GameObject cookArea;
 
     //stores the button to exit the cookingArea
-    public Button exitButton;
+    //public Button exitButton;
     // Start is called before the first frame update
     void Start()
     {
-        exitButton.onClick.AddListener(closeArea);
+        //exitButton.onClick.AddListener(closeArea);
     }
 
     // Update is called once per frame

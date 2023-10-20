@@ -13,6 +13,7 @@ public enum foodName
     CATBOX,
     FULLFISH,
     THICKDRINK,
+    TAIYAKI,
     TRASH
 }
 

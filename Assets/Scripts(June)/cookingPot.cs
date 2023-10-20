@@ -122,17 +122,17 @@ public class cookingPot : MonoBehaviour
         //checks for overall ingredientValue and produces a food accordingly
 
 
-        //example: flour + chocolate + milk = takoyaki
+        //example: flour + chocolate + milk = taiyaki
         if (ingredientValue == 139)
         {
-            outputFood?.Invoke(foodName.CATBAG);
+            outputFood?.Invoke(foodName.TAIYAKI);
         }
 
         //mochi + flour + strawberry = Strawberry Mochi
 
 
         //temporary: Love + balls + milk = Boba
-        else if (ingredientValue == )
+        else if (ingredientValue == 237)
         {
             outputFood?.Invoke(foodName.BOBA);
         }
@@ -141,7 +141,8 @@ public class cookingPot : MonoBehaviour
         //if set of ingredients isn't in list
         else
         {
-            //produce junkFood
+            outputFood?.Invoke(foodName.TRASH);
+
         }
 
         ingredientCount = 0;
