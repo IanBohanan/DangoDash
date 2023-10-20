@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using System.Linq;
 public class Customer : MonoBehaviour
 {
 
-    public static event Action<int> leftLine; //Event signal when customer leaves the line. Sent out: int which spot in line they were
-
-    public int spotInLine; //Which spot in line did this customer take when it spawned?
-
-    private Food desiredFood = new Food(); //What food does this customer want?
-
-    public foodName debugfoodname;
+    public foodName desiredFood; //What food does this customer want?
 
     public float lineTimer = 10.0f; //Time until customer leaves after entering store
 
@@ -29,11 +23,6 @@ public class Customer : MonoBehaviour
     private Vector3 lastValidCoords; //The last valid position of the Customer. If they are dragged to an invalid location, they will return here.
 
     private ClickDragTest dragScript;
-
-    [SerializeField]
-    private GameObject thinkCloud; //The cloud that shows what the customer wants
-    [SerializeField]
-    private Animator foodDisplay; //The animator that displays the desired food object
 
     public enum CustomerState
     {
@@ -60,7 +49,7 @@ public class Customer : MonoBehaviour
             GameObject hitObject = collision.gameObject;
             if (hitObject.GetComponent<Table>())
             {
-                print("Customer: I touched a table!");
+                print("I touched a table!");
                 curTable = hitObject;
             }
             
@@ -68,11 +57,11 @@ public class Customer : MonoBehaviour
         catch (Exception a) { }
     }
 
-    //Generates a random food for the desired food, then set the foodCloud's desiredFood icon to the generated food
+    //Generates a random food value from the foodName enum
+    //TODO: This might miss the last value in the enum array? Be sure to check
     private void generateFood()
     {
-        desiredFood.generateName();
-        debugfoodname = desiredFood.name;
+        desiredFood = (foodName)UnityEngine.Random.Range(0, Enum.GetValues(typeof(foodName)).Cast<int>().Max());
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -100,8 +89,13 @@ public class Customer : MonoBehaviour
                 //Is the table they're trying to sit at already taken?
                 if (draggedTable.state == Table.TableState.EMPTY)
                 {
-                    //Table is empty! Have the customer sit in at the table.
-                    sitAtTable(draggedTable);
+                    //Table is empty! Have the customer sit in the chair, then update state, reset timer, and disable ability to drag
+                    this.transform.position = curTable.transform.Find("LeftChair").transform.position;
+                    print("Customer: I sat at the table!");
+                    state = CustomerState.SEATED;
+                    draggedTable.seatCustomer();
+                    timeLeft = tableTimer;
+                    Destroy(GetComponent<ClickDragTest>());
                 }
                 else
                 {
@@ -121,21 +115,6 @@ public class Customer : MonoBehaviour
         }
     }
 
-    //Has the customer sit at a table. Updates its state (and the table's state) 
-    //and displays what food they want
-    private void sitAtTable(Table table)
-    {
-        print("Customer: I sat at the table!");
-        leftLine?.Invoke(spotInLine); //Tell the CustomerSpawner its sat down and it should free the spot in line
-        this.transform.position = curTable.transform.Find("LeftChair").transform.position;
-        state = CustomerState.SEATED;
-        table.seatCustomer();
-        timeLeft = tableTimer;
-        Destroy(GetComponent<ClickDragTest>()); //Customer should not be dragged anymore after this. So destroy ability yo drag
-        thinkCloud.SetActive(true);
-        foodDisplay.SetInteger("FoodNum", (int)desiredFood.name); //Display the correct food above their head
-    }
-
     //Updates the timer every frame.
     //Once the timer reaches zero, the customer leaves and notifies the game that they left
     private void updateTimer()
@@ -144,8 +123,7 @@ public class Customer : MonoBehaviour
 
         if (timeLeft <= 0.0f)
         {
-            customerLeft?.Invoke(isHappy); //Tell reputation bar the customer left
-            leftLine?.Invoke(spotInLine); //Tell the CustomerSpawner its sat down and it should free the spot in line
+            customerLeft?.Invoke(isHappy);
             Destroy(transform.gameObject);
         }
     }

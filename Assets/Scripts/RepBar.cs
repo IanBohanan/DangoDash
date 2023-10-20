@@ -36,10 +36,12 @@ public class RepBar : MonoBehaviour
     {
         if(wasHappy)
         {
+            print("RepBar: Customer left restraunt! They were happy so reputation increased!");
             reputation += 10;
         }
         else
         {
+            print("RepBar: Customer left restraunt! They were angry so reputation dropped!");
             reputation -= 10;
         }
         updateSlider();
