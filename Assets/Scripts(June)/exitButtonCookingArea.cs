@@ -10,7 +10,7 @@ public class exitButtonCookingArea : MonoBehaviour
     [SerializeField]
     private GameObject cookingArea;
 
-    private SpriteRenderer exampleAnim;
+    public SpriteRenderer exampleAnim;
 
     private void OnMouseDown()
     {

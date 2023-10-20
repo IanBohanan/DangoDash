@@ -905,6 +905,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 797805748}
     - target: {fileID: 2358584045843112000, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
+      propertyPath: exampleAnim
+      value: 
+      objectReference: {fileID: 734838662}
+    - target: {fileID: 2358584045843112000, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: kitchenArea
       value: 
       objectReference: {fileID: 0}
@@ -970,7 +974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329477270537653139, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7396255055473561648, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_LocalPosition.x
