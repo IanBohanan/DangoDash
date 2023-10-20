@@ -52,7 +52,6 @@ public class cookingPot : MonoBehaviour
         //for now, this is done by object name, there's probably a better way to do this but it's functional for now
         if (ingredient.name == "Chocolate")
         {
-            print("got chocolate");
             ingredientValue += 19;
         }
 
@@ -89,7 +88,6 @@ public class cookingPot : MonoBehaviour
         //if the passed object is not any of the expected ingredients, neutralizes the effects on any important values and moves on
         else
         {
-            Debug.Log("unrecognized ingredient");
             ingredientCount -= 1;
         }
 

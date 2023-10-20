@@ -74,7 +74,6 @@ public class FoodSpawnr : MonoBehaviour
     {
         if(spot >= 0)
         {
-            print("FoodSpawner: Freeing counter spot" + spot);
             spawnPoints[spot].filled = false;
         }
 

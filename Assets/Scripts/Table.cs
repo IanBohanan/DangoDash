@@ -25,12 +25,12 @@ public class Table : MonoBehaviour
     public void receiveFood(Food food)
     {
         seatedCustomer.eat(food);
+        free();
     }
 
     // Start is called before the first frame update
     public void free()
     {
-        print("Table: I am free!");
         state = TableState.EMPTY;
     }
 
