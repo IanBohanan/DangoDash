@@ -368,17 +368,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      emmaleeDunbar_cookingArea_items_0: 4065780973562773811
-      emmaleeDunbar_cookingArea_items_1: 5961301092910800428
-      emmaleeDunbar_cookingArea_items_2: -4750942612857846235
-      emmaleeDunbar_cookingArea_items_3: -5634645017439093498
-      emmaleeDunbar_cookingArea_items_4: -6126814347566889305
-      emmaleeDunbar_cookingArea_items_5: -5826934283750493662
-      emmaleeDunbar_cookingArea_items_6: -2489379140688800592
-      emmaleeDunbar_cookingArea_items_7: 5298656947804536926
-      emmaleeDunbar_cookingArea_items_8: 599711655724111071
-      emmaleeDunbar_cookingArea_items_9: 1623946363854247810
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
