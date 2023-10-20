@@ -30,13 +30,12 @@ public class cookingPot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (connectedBay.containedItem != null)
-        {
-            //If the bay is not empty, pull the ingredient stored within into the pot
-            addIngredient(connectedBay.containedItem);
-        }
 
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        addIngredient(collision.gameObject);
     }
 
     public void addIngredient(GameObject ingredient)

@@ -437,6 +437,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1374392536311085920, guid: 7d4ba9ff424d4d34697a85caaad56f32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 2664290613400029013, guid: 7d4ba9ff424d4d34697a85caaad56f32, type: 3}
       propertyPath: openCookbook
       value: 
@@ -499,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230443770796370197, guid: 7d4ba9ff424d4d34697a85caaad56f32, type: 3}
       propertyPath: m_Name
-      value: CookingAreaOpener Variant
+      value: UpdatedCookingAreaOpener
       objectReference: {fileID: 0}
     - target: {fileID: 6315585245299109616, guid: 7d4ba9ff424d4d34697a85caaad56f32, type: 3}
       propertyPath: m_LocalPosition.x
