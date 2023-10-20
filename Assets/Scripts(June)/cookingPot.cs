@@ -1,7 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class cookingPot : MonoBehaviour
 {
 
@@ -23,7 +24,7 @@ public class cookingPot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,8 +35,8 @@ public class cookingPot : MonoBehaviour
             //If the bay is not empty, pull the ingredient stored within into the pot
             addIngredient(connectedBay.containedItem);
         }
-        
-       
+
+
     }
 
     public void addIngredient(GameObject ingredient)
@@ -88,13 +89,13 @@ public class cookingPot : MonoBehaviour
         ingredientCount += 1;
 
 
-        
+
 
         //moves the ingredient back to its spot on the shelf
         ingredientMove = ingredient.GetComponent<ClickDragTest>();
 
         ingredientMove.resetPosition();
-        
+
         //removes the ingredient from the bay
         connectedBay.clearBay();
 
@@ -109,13 +110,25 @@ public class cookingPot : MonoBehaviour
     //I still need the cookbook/recipes to add everything to this
     public void mixIngredients()
     {
+
+        //might change this to switch statements whenever time allows, for sake of clarity
+
+
         //checks for overall ingredientValue and produces a food accordingly
 
-        //example: chocolate + chocolate + chocolate
-        if(ingredientValue == 57)
+
+        //example: flour + chocolate + milk = takoyaki
+        if (ingredientValue == 139)
         {
-            //produce ChocolateFood
+            outputFood?.Invoke(foodName.CRAB);
         }
+
+        //mochi + flour + strawberry = Strawberry Mochi
+        else if (ingredientValue == 179)
+        {
+            outputFood?.Invoke(foodName.ICECREAM);
+        }
+
 
         //if set of ingredients isn't in list
         else
@@ -133,10 +146,17 @@ public class cookingPot : MonoBehaviour
 
 
 
-        
+
 
     }
 
 
 
+    //prototype for unity actions
+
+    public static event Action<foodName> outputFood;
+
+
+
 }
+
