@@ -78,6 +78,11 @@ public class cookingPot : MonoBehaviour
             ingredientValue += 83;
         }
 
+        else if (ingredient.name == "Love")
+        {
+            ingredientValue += 101;
+        }
+
         //if the passed object is not any of the expected ingredients, neutralizes the effects on any important values and moves on
         else
         {
@@ -124,7 +129,10 @@ public class cookingPot : MonoBehaviour
         }
 
         //mochi + flour + strawberry = Strawberry Mochi
-        else if (ingredientValue == 179)
+
+
+        //temporary: Love + balls + milk = Boba
+        else if (ingredientValue == )
         {
             outputFood?.Invoke(foodName.BOBA);
         }
