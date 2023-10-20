@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 1
 --- !u!61 &68655893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1041,6 +1042,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2010579118}
     - target: {fileID: 2358584045843112000, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
+      propertyPath: cookingArea
+      value: 
+      objectReference: {fileID: 797805748}
+    - target: {fileID: 2358584045843112000, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: kitchenArea
       value: 
       objectReference: {fileID: 797805751}
@@ -1106,19 +1111,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329477270537653139, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7396255055473561648, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.69306546
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7396255055473561648, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.75
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 7396255055473561648, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.046561416
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7396255055473561648, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2184,6 +2189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 1
 --- !u!61 &1802510167
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2665,7 +2671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743d745e045d1b84586df98af5fd0935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenArea: {fileID: 797805751}
+  kitchenArea: {fileID: 797805748}
   tables: {fileID: 2010579118}
 --- !u!1 &2051162464
 GameObject:
@@ -7397,3 +7403,4 @@ SceneRoots:
   - {fileID: 2010579119}
   - {fileID: 856537158}
   - {fileID: 2016989516}
+  - {fileID: 68655890}

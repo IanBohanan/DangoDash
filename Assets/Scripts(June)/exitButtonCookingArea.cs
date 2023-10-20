@@ -10,10 +10,12 @@ public class exitButtonCookingArea : MonoBehaviour
 
     [SerializeField]
     private GameObject tables;
+    [SerializeField]
+    private GameObject cookingArea;
 
     private void OnMouseDown()
     {
-        kitchenArea.Play("MoveDown");
+        cookingArea.SetActive(false);
         tables.SetActive(true);
     }
 
