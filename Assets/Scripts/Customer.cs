@@ -51,6 +51,7 @@ public class Customer : MonoBehaviour
         timeLeft = lineTimer;
         lastValidCoords = transform.position;
         dragScript = GetComponent<ClickDragTest>();
+        dragScript.autoReturn = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

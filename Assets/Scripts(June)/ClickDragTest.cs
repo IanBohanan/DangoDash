@@ -6,6 +6,8 @@ using UnityEngine;
 public class ClickDragTest : MonoBehaviour
 {
 
+    public bool autoReturn = true;
+
     private bool dragging = false;
 
     //offset to compensate for mouse clicking being weird
@@ -51,7 +53,7 @@ public class ClickDragTest : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if(dragging)
+        if (dragging)
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mousePositionOffset;
         }
@@ -59,8 +61,11 @@ public class ClickDragTest : MonoBehaviour
 
     private void OnMouseUp()
     {
-        transform.position = lastValidCoords;
-        dragging = false;
+        if (autoReturn)
+        {
+            transform.position = lastValidCoords;
+            dragging = false;
+        }
     }
 
     public void resetPosition()
