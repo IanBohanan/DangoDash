@@ -78,6 +78,11 @@ public class cookingPot : MonoBehaviour
             ingredientValue += 83;
         }
 
+        else if (ingredient.name == "Love")
+        {
+            ingredientValue += 101;
+        }
+
         //if the passed object is not any of the expected ingredients, neutralizes the effects on any important values and moves on
         else
         {
@@ -117,14 +122,17 @@ public class cookingPot : MonoBehaviour
         //checks for overall ingredientValue and produces a food accordingly
 
 
-        //example: flour + chocolate + milk = takoyaki
+        //example: flour + chocolate + milk = taiyaki
         if (ingredientValue == 139)
         {
-            outputFood?.Invoke(foodName.CATBAG);
+            outputFood?.Invoke(foodName.TAIYAKI);
         }
 
         //mochi + flour + strawberry = Strawberry Mochi
-        else if (ingredientValue == 179)
+
+
+        //temporary: Love + balls + milk = Boba
+        else if (ingredientValue == 237)
         {
             outputFood?.Invoke(foodName.BOBA);
         }
@@ -133,7 +141,8 @@ public class cookingPot : MonoBehaviour
         //if set of ingredients isn't in list
         else
         {
-            //produce junkFood
+            outputFood?.Invoke(foodName.TRASH);
+
         }
 
         ingredientCount = 0;
