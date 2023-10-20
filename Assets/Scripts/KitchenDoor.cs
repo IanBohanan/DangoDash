@@ -5,14 +5,14 @@ using UnityEngine;
 public class KitchenDoor : MonoBehaviour
 {
     [SerializeField]
-    private Animator kitchenArea;
+    private GameObject kitchenArea;
 
     [SerializeField]
     private GameObject tables;
     //When clicked, transition
     private void OnMouseDown()
     {
-        kitchenArea.Play("MoveUp");
+        kitchenArea.SetActive(true);
         tables.SetActive(false);
     }
 
