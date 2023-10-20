@@ -13,9 +13,12 @@ public enum foodName
 
 public class Food : MonoBehaviour
 {
+    public static event Action<int> leftCounter;
+
     [SerializeField]
     public foodName name;
     public Animator foodDisplay; //The animator that displays the food
+    public int spotInLine = -1; //Where is its spot on the counter
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,6 +28,7 @@ public class Food : MonoBehaviour
             
             if(hitTable.state == Table.TableState.SEATED)
             {
+                leftCounter?.Invoke(spotInLine);
                 hitTable.receiveFood(this);
                 Destroy(transform.gameObject);
             }
