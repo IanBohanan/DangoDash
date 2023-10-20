@@ -63,8 +63,9 @@ public class ClickDragTest : MonoBehaviour
         if (autoReturn)
         {
             transform.position = lastValidCoords;
-            dragging = false;
+            
         }
+        dragging = false;
     }
 
     public void resetPosition()

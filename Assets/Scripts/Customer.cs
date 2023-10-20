@@ -120,7 +120,6 @@ public class Customer : MonoBehaviour
             }
             catch (Exception a) //If the customer was over a non-table
             {
-                print("Customer:Dragged over non-table object!");
                 tweenToLocation(lastValidCoords);
                 //Go back to spawn point
             }
@@ -131,9 +130,9 @@ public class Customer : MonoBehaviour
     //and displays what food they want
     private void sitAtTable(Table table)
     {
-        leftLine?.Invoke(spotInLine); //Tell the CustomerSpawner its sat down and it should free the spot in line
-        this.transform.position = curTable.transform.Find("LeftChair").transform.position;
         state = CustomerState.SEATED;
+        leftLine?.Invoke(spotInLine); //Tell the CustomerSpawner its sat down and it should free the spot in line
+        this.transform.position = curTable.transform.Find("LeftChair").transform.position;     
         table.seatCustomer(this);
         timeLeft = tableTimer;
         Destroy(GetComponent<ClickDragTest>()); //Customer should not be dragged anymore after this. So destroy ability yo drag
@@ -144,7 +143,6 @@ public class Customer : MonoBehaviour
     //Eats a given food object and determines whether it was correct or not
     public void eat(Food food)
     {
-        print("Customer: I received a " + food.name);
 
         if (food.name.Equals(desiredFood.name))
         {

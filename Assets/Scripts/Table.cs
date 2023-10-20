@@ -30,7 +30,6 @@ public class Table : MonoBehaviour
     // Start is called before the first frame update
     public void free()
     {
-        print("Table: I am free!");
         state = TableState.EMPTY;
     }
 

@@ -298,6 +298,7 @@ MonoBehaviour:
   tableTimer: 20
   timeLeft: 5
   isHappy: 0
+  curTable: {fileID: 0}
   thinkCloud: {fileID: 176548880594296332}
   foodDisplay: {fileID: 8111809494348503429}
   state: 0
@@ -313,6 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 0
 --- !u!114 &6981104233560039177
 MonoBehaviour:
   m_ObjectHideFlags: 0

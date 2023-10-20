@@ -85,7 +85,6 @@ public class CustomerSpawner : MonoBehaviour
     //Params: int spot - the spot in line that should be freed.
     private void freeLineSpot(int spot)
     {
-        print("CustomerSpawner: Freeing line spot" + spot);
         spawnPoints[spot].filled = false;
     }
 
