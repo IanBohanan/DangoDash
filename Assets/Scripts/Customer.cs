@@ -24,7 +24,7 @@ public class Customer : MonoBehaviour
 
     public bool isHappy = false;
 
-    private GameObject curTable = null; //Which table is this customer currently sitting at?
+    public GameObject curTable = null; //Which table is this customer currently sitting at?
 
     private Vector3 lastValidCoords; //The last valid position of the Customer. If they are dragged to an invalid location, they will return here.
 
@@ -58,9 +58,8 @@ public class Customer : MonoBehaviour
         try
         {
             GameObject hitObject = collision.gameObject;
-            if (hitObject.GetComponent<Table>())
+            if (hitObject.GetComponent<Table>() && state == CustomerState.WAITING)
             {
-                print("Customer: I touched a table!");
                 curTable = hitObject;
             }
             
@@ -79,7 +78,11 @@ public class Customer : MonoBehaviour
     {
         try
         {
-            curTable = null;
+            if(collision.transform.gameObject.GetComponent<Table>())
+            {
+                curTable = null;
+            }
+            
         }
         catch (Exception a) { }
     }
@@ -108,9 +111,10 @@ public class Customer : MonoBehaviour
                     print("Customer: I tried to sit, but table was full!");
                     //Table is full, return customer to its spawn point
                     tweenToLocation(lastValidCoords);
+                    curTable = null;
                 }
+                
 
-                curTable = null;
             }
             catch (Exception a) //If the customer was over a non-table
             {
@@ -125,15 +129,30 @@ public class Customer : MonoBehaviour
     //and displays what food they want
     private void sitAtTable(Table table)
     {
-        print("Customer: I sat at the table!");
         leftLine?.Invoke(spotInLine); //Tell the CustomerSpawner its sat down and it should free the spot in line
         this.transform.position = curTable.transform.Find("LeftChair").transform.position;
         state = CustomerState.SEATED;
-        table.seatCustomer();
+        table.seatCustomer(this);
         timeLeft = tableTimer;
         Destroy(GetComponent<ClickDragTest>()); //Customer should not be dragged anymore after this. So destroy ability yo drag
         thinkCloud.SetActive(true);
         foodDisplay.SetInteger("FoodNum", (int)desiredFood.name); //Display the correct food above their head
+    }
+
+    //Eats a given food object and determines whether it was correct or not
+    public void eat(Food food)
+    {
+        print("Customer: I received a " + food.name);
+
+        if(food.name.Equals(desiredFood.name))
+        {
+            isHappy = true;
+        }
+        else
+        {
+            isHappy = false;
+        }
+        leaveRestraunt();
     }
 
     //Updates the timer every frame.
@@ -144,10 +163,22 @@ public class Customer : MonoBehaviour
 
         if (timeLeft <= 0.0f)
         {
-            customerLeft?.Invoke(isHappy); //Tell reputation bar the customer left
+            isHappy = false;
             leftLine?.Invoke(spotInLine); //Tell the CustomerSpawner its sat down and it should free the spot in line
-            Destroy(transform.gameObject);
+            leaveRestraunt();
         }
+    }
+
+    private void leaveRestraunt()
+    {
+        try
+        {
+            curTable.GetComponent<Table>().free();
+        }
+        catch (Exception e) { }
+        customerLeft?.Invoke(isHappy); //Tell reputation bar the customer left
+        Destroy(transform.gameObject);
+
     }
 
     // Update is called once per frame

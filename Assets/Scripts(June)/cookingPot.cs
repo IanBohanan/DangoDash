@@ -120,7 +120,7 @@ public class cookingPot : MonoBehaviour
         //example: flour + chocolate + milk = takoyaki
         if (ingredientValue == 139)
         {
-            outputFood?.Invoke(foodName.CATBAG);
+            outputFood?.Invoke(foodName.BOBA);
         }
 
         //mochi + flour + strawberry = Strawberry Mochi
