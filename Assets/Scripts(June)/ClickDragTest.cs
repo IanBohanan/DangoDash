@@ -7,8 +7,6 @@ public class ClickDragTest : MonoBehaviour
 {
     public bool autoReturn = true;
 
-    public bool autoReturn = true;
-
     private bool dragging = false;
 
     //offset to compensate for mouse clicking being weird
