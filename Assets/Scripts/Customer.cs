@@ -31,7 +31,9 @@ public class Customer : MonoBehaviour
     private ClickDragTest dragScript;
 
     [SerializeField]
-    private GameObject thinkCloud; //The cloud that shows what the customer wants
+    private GameObject thinkCloud; //The cloud gameObject that shows what the customer wants
+    [SerializeField]
+    private Renderer cloudRenderer; //The cloud sprite object's renderer. Used to change its color
     [SerializeField]
     private Animator foodDisplay; //The animator that displays the desired food object
 
@@ -181,6 +183,30 @@ public class Customer : MonoBehaviour
 
     }
 
+    //Updates the color of the customer's cloud based on the timer.
+    //Smoothly interpolates the cloud from green (max timer) to red (timer hits zero)
+    private void updateCloudColor()
+    {
+        float normalizedTime; //How much time has been taken up by the customer, expressed as a percent between 0 and 1. (ex. 50% of the timer is depleted, this value will be 0.5)
+
+        //Need to determine WHICH timer is running and how much has been "consumed". 
+        //Clamp01 will turn it into a num from 0 and 1, like real percentages!
+        if(state == CustomerState.WAITING)
+        {
+            normalizedTime = Mathf.Clamp01(timeLeft/lineTimer); 
+        }
+        else //There are no other max timers, so just using a generic else.
+        {
+            normalizedTime = Mathf.Clamp01(timeLeft/tableTimer);
+        }
+
+        //Determines the color between 0 and 1, 0 is green while 1 is red. So subtract the amount of time consumed from the red "1" maximum.
+        Color lerpedColor = Color.Lerp(Color.green, Color.red, 1.0f - normalizedTime);
+
+        //Now set the color of the thought bubble
+        cloudRenderer.material.color = lerpedColor;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -189,5 +215,7 @@ public class Customer : MonoBehaviour
             updateTimer();
         }
 
+        //then update the color of the thinkCloud
+        updateCloudColor();
     }
 }
