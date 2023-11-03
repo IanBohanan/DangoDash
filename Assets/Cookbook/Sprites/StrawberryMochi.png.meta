@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ce08041d830f85b4198c5bccf17160fa
+guid: 3b902ce9054e4c644bc2314dbf4e61ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7665867637609263253
-    second: backdoor_0
+      213: -5820958399731718359
+    second: StrawberryMochi_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backdoor_0
+      name: StrawberryMochi_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 217
-        height: 227
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6f0325cffd5d9590800000000000000
-      internalID: -7665867637609263253
+      spriteID: 9272aab1d2dc73fa0800000000000000
+      internalID: -5820958399731718359
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      backdoor_0: -7665867637609263253
+      StrawberryMochi_0: -5820958399731718359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

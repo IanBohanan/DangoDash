@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ce08041d830f85b4198c5bccf17160fa
+guid: 8197840ace7330d4791dafa3b8c0440e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7665867637609263253
-    second: backdoor_0
+      213: -3560852360957142242
+    second: skull_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backdoor_0
+      name: skull_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 217
-        height: 227
+        x: 3
+        y: 1
+        width: 26
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6f0325cffd5d9590800000000000000
-      internalID: -7665867637609263253
+      spriteID: e1bd987d4af459ec0800000000000000
+      internalID: -3560852360957142242
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      backdoor_0: -7665867637609263253
+      skull_0: -3560852360957142242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
