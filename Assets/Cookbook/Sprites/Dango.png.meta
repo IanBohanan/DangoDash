@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dango_0: -4972704470256024460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

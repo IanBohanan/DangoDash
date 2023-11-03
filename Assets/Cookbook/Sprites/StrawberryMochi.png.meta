@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StrawberryMochi_0: -5820958399731718359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

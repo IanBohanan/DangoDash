@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      orc_green_0: -2698412993524973108
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

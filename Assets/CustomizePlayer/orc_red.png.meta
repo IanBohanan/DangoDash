@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      orc_red_0: 5001406395955743833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
