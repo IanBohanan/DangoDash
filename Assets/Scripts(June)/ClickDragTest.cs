@@ -73,13 +73,11 @@ public class ClickDragTest : MonoBehaviour
     {
         transform.position = lastValidCoords;
     }
+    //sets lastValidCoords to the passed position: called from other scripts
+    //need some signal-based variant for transitions, work on when working on screen transition
+    public void setHome(Vector3 newHome)
+    {
+        lastValidCoords = newHome;
+    }
+
 }
-
-
-
-/*Questions for meeting
- * 
- * what do if player tries to cook when all storage spots are full?
- * whad do if player tries to drop an object in the completely wrong place
- * snapping to location when dropped?
- * */

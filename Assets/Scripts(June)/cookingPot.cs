@@ -20,76 +20,62 @@ public class cookingPot : MonoBehaviour
 
     public int ingredientValue = 0;
 
+    [SerializeField]Ingredient passedIngredient;
+    
+
     [SerializeField] holdingBay connectedBay;
+
+    GameObject ingredientToAdd;
 
     //used to reset ingredients' positions after use
     ClickDragTest ingredientMove;
 
-    // Start is called before the first frame update
-    void Start()
+    bool addTrigger;
+    private void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        addTrigger = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    { 
-        if(collision.gameObject.GetComponent<ClickDragTest>())
+    {
+
+        print("trigger entered");
+        if (collision.gameObject.GetComponent<Ingredient>())
         {
-            addIngredient(collision.gameObject);
+            ingredientToAdd = collision.gameObject;
+            addTrigger = true;
+        }
+    }
+    //addIngredient(collision.gameObject);
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        print("trigger exited");
+        if (collision.gameObject.GetComponent<Ingredient>())
+        {
+            addTrigger = false;
+        }
+    }
+
+    public void checkAddIngredient()
+    {
+        if (addTrigger == true)
+        {
+            print("added ingredient");
+            addIngredient(ingredientToAdd);
         }
     }
 
     public void addIngredient(GameObject ingredient)
     {
 
-        //checks for what ingredient was passed in
-        //for now, this is done by object name, there's probably a better way to do this but it's functional for now
-        if (ingredient.name == "Chocolate")
-        {
-            ingredientValue += 19;
-        }
 
-        else if (ingredient.name == "Mochi")
-        {
-            ingredientValue += 53;
-        }
+        //adds the passed ingredientValue
 
-        else if (ingredient.name == "Flour")
-        {
-            ingredientValue += 37;
-        }
 
-        else if (ingredient.name == "Strawberry")
-        {
-            ingredientValue += 89;
-        }
+        ingredientValue += ingredient.GetComponent<Ingredient>().ingredientValue;
 
-        else if (ingredient.name == "Sticks")
-        {
-            ingredientValue += 97;
-        }
 
-        else if (ingredient.name == "Milk")
-        {
-            ingredientValue += 83;
-        }
-
-        else if (ingredient.name == "Love")
-        {
-            ingredientValue += 101;
-        }
-
-        //if the passed object is not any of the expected ingredients, neutralizes the effects on any important values and moves on
-        else
-        {
-            ingredientCount -= 1;
-        }
 
 
         ingredientCount += 1;
@@ -117,30 +103,21 @@ public class cookingPot : MonoBehaviour
     //I still need the cookbook/recipes to add everything to this
     public void mixIngredients()
     {
-        //might change this to switch statements whenever time allows, for sake of clarity
+        //new switch statement for this
         //checks for overall ingredientValue and produces a food accordingly
-        //example: flour + chocolate + milk = taiyaki
-        if (ingredientValue == 139)
+        switch (ingredientValue)
         {
-
-            outputFood?.Invoke(foodName.TAIYAKI);
-        }
-
-        //mochi + flour + strawberry = Strawberry Mochi
-
-
-        //temporary: Love + balls + milk = Boba
-        else if (ingredientValue == 237)
-        {
-            outputFood?.Invoke(foodName.BOBA);
-        }
-
-
-        //if set of ingredients isn't in list
-        else
-        { 
-            outputFood?.Invoke(foodName.TRASH);
-
+            //example: flour + chocolate + milk = taiyaki
+            case 139:
+                outputFood?.Invoke(foodName.TAIYAKI);
+                break;
+            //temporary: Love + balls + milk = Boba
+            case 237:
+                outputFood?.Invoke(foodName.BOBA);
+                break;
+            default:
+                outputFood?.Invoke(foodName.TRASH);
+                break;
         }
 
         ingredientCount = 0;
@@ -149,7 +126,6 @@ public class cookingPot : MonoBehaviour
 
 
     }
-
 
 
 
