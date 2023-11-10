@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tempCookBook - Copy_0: 395881022990576443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
