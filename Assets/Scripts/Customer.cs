@@ -111,11 +111,13 @@ public class Customer : MonoBehaviour
                 //Is the table they're trying to sit at already taken?
                 if (draggedTable.state == Table.TableState.EMPTY)
                 {
-                    //Table is empty! Have the customer sit in at the table.
-                    sitAtTable(draggedTable);
-                    //Then update the icon to display their desired food 
+                    //Update the icon to display their desired food 
                     tableIcon.SetActive(false);
                     foodIcon.SetActive(true);
+
+                    //Table is empty! Have the customer sit in at the table.
+                    sitAtTable(draggedTable);
+
                 }
                 else
                 {
@@ -180,9 +182,20 @@ public class Customer : MonoBehaviour
 
     private void leaveRestraunt()
     {
+
+        if(isHappy)
+        {
+            print("Customer was fed and satisfied!");
+        }
+        else
+        {
+            print("Customer ran out of time!");
+        }
+
         try
         {
             curTable.GetComponent<Table>().free();
+            print("Customer was at table!");
         }
         catch (Exception e) { }
         customerLeft?.Invoke(isHappy); //Tell reputation bar the customer left
