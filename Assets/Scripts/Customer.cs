@@ -33,6 +33,10 @@ public class Customer : MonoBehaviour
     [SerializeField]
     private GameObject thinkCloud; //The cloud gameObject that shows what the customer wants
     [SerializeField]
+    private GameObject tableIcon; //The table icon that shows a table when the customer is standing in line
+    [SerializeField]
+    private GameObject foodIcon; //The food icon that shows which food the customer wants (after they have already sat down)
+    [SerializeField]
     private Renderer cloudRenderer; //The cloud sprite object's renderer. Used to change its color
     [SerializeField]
     private Animator foodDisplay; //The animator that displays the desired food object
@@ -109,6 +113,9 @@ public class Customer : MonoBehaviour
                 {
                     //Table is empty! Have the customer sit in at the table.
                     sitAtTable(draggedTable);
+                    //Then update the icon to display their desired food 
+                    tableIcon.SetActive(false);
+                    foodIcon.SetActive(true);
                 }
                 else
                 {

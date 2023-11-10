@@ -212,9 +212,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1566177224953526371}
   - component: {fileID: 4201671915221886620}
+  - component: {fileID: 1856919550193094711}
   - component: {fileID: 409491646276949197}
   - component: {fileID: 5939875560253279310}
-  - component: {fileID: 1856919550193094711}
   - component: {fileID: 9134621474532618730}
   - component: {fileID: 6981104233560039177}
   m_Layer: 0
@@ -292,6 +292,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1856919550193094711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2407452227630154359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeeb6cc76eb56b479baab6079153e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotInLine: 0
+  debugfoodname: 0
+  lineTimer: 10
+  tableTimer: 20
+  timeLeft: 5
+  isHappy: 0
+  curTable: {fileID: 0}
+  thinkCloud: {fileID: 176548880594296332}
+  tableIcon: {fileID: 1101683322940649224}
+  foodIcon: {fileID: 8037778140904053257}
+  cloudRenderer: {fileID: 875913444696702698}
+  foodDisplay: {fileID: 8111809494348503429}
+  state: 0
 --- !u!50 &409491646276949197
 Rigidbody2D:
   serializedVersion: 4
@@ -365,29 +390,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.24834085, y: 0.30201256}
   m_EdgeRadius: 0
---- !u!114 &1856919550193094711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2407452227630154359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eeeb6cc76eb56b479baab6079153e08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spotInLine: 0
-  debugfoodname: 0
-  lineTimer: 10
-  tableTimer: 20
-  timeLeft: 5
-  isHappy: 0
-  curTable: {fileID: 0}
-  thinkCloud: {fileID: 176548880594296332}
-  cloudRenderer: {fileID: 875913444696702698}
-  foodDisplay: {fileID: 8111809494348503429}
-  state: 0
 --- !u!114 &9134621474532618730
 MonoBehaviour:
   m_ObjectHideFlags: 0
