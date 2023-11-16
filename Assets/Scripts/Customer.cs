@@ -6,6 +6,8 @@ using System;
 public class Customer : MonoBehaviour
 {
 
+    private int tablesTouched = 0;
+
     public static event Action<int> leftLine; //Event signal when customer leaves the line. Sent out: int which spot in line they were
 
     public int spotInLine; //Which spot in line did this customer take when it spawned?
@@ -69,6 +71,7 @@ public class Customer : MonoBehaviour
             if (hitObject.GetComponent<Table>() && state == CustomerState.WAITING)
             {
                 curTable = hitObject;
+                tablesTouched++;
             }
 
         }
@@ -88,7 +91,12 @@ public class Customer : MonoBehaviour
         {
             if (collision.transform.gameObject.GetComponent<Table>())
             {
-                curTable = null;
+                tablesTouched--;
+                if(tablesTouched <= 0)
+                {
+                    curTable = null;
+                    tablesTouched = 0;
+                }
             }
 
         }
@@ -131,6 +139,7 @@ public class Customer : MonoBehaviour
             }
             catch (Exception a) //If the customer was over a non-table
             {
+                print("Customer:I tried to sit, but I did not have curTable!");
                 tweenToLocation(lastValidCoords);
                 //Go back to spawn point
             }
