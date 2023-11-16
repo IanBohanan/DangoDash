@@ -8,7 +8,7 @@ public class ClickDragTest : MonoBehaviour
     public bool autoReturn = true;
 
 
-    private bool dragging = false;
+    public bool dragging = false;
 
     //offset to compensate for mouse clicking being weird
     Vector3 mousePositionOffset;
@@ -80,4 +80,17 @@ public class ClickDragTest : MonoBehaviour
         lastValidCoords = newHome;
     }
 
+
+    public void startDrag()
+    {
+        //mousePositionOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);// + mousePositionOffset;
+        //mousePositionOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //lastValidCoords = transform.position;
+        mousePositionOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        lastValidCoords = transform.position;
+
+        dragging = true;
+        
+    }
 }

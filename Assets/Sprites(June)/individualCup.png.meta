@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: af694b2796ce6884197d4218b34256b9
+guid: 859d857ec4f6e1041bf7ebb34e2bbb36
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 395881022990576443
-    second: tempCookBook - Copy_0
+      213: -1732974658587602479
+    second: individualCup_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tempCookBook - Copy_0
+      name: individualCup_0
       rect:
         serializedVersion: 2
-        x: 359
-        y: 1020
-        width: 285
-        height: 287
+        x: 0
+        y: 0
+        width: 36
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3beba461b37e7500800000000000000
-      internalID: 395881022990576443
+      spriteID: 1d1d12ecabc33f7e0800000000000000
+      internalID: -1732974658587602479
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      tempCookBook - Copy_0: 395881022990576443
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
