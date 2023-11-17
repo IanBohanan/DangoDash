@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class dayManager : MonoBehaviour
 {
@@ -13,7 +15,12 @@ public class dayManager : MonoBehaviour
     private int customersServed = 0;
     private int customersCameIn = 0; //How many customers came into the store?
     private int foodMade = 0;
+    //Keep track of lifetime stats
     private int daysCompleted = 0;
+    private int lifeServedCustomers = 0;
+    private int lifeAngeredCustomers = 0;
+    private int lifeFoodCooked = 0;
+    private int lifeTrashCount = 0;
 
     //All the texts to change on the data screen
     [SerializeField]
@@ -33,6 +40,19 @@ public class dayManager : MonoBehaviour
     [SerializeField]
     private GameObject endOfDayScreen;
 
+    [Header("Text bars game over screen")]
+    [SerializeField]
+    private TMP_Text lifetimeServedText;
+    [SerializeField]
+    private TMP_Text lifetimeAngeredText;
+    [SerializeField]
+    private TMP_Text daysInServiceText;
+    [SerializeField]
+    private TMP_Text foodCookedText;
+    [SerializeField]
+    private TMP_Text trashMadeText;
+    [SerializeField]
+    private GameObject gameOverScreen;
 
     private void Start()
     {
@@ -45,6 +65,7 @@ public class dayManager : MonoBehaviour
         StardewClock.dayOver += endDay; //
         Customer.customerLeft += servedCustomer;
         cookingPot.outputFood += createdFood;
+        RepBar.gameOver += endGame;
     }
 
     void OnDisable()
@@ -52,6 +73,18 @@ public class dayManager : MonoBehaviour
         StardewClock.dayOver -= endDay;
         Customer.customerLeft -= servedCustomer;
         cookingPot.outputFood -= createdFood;
+        RepBar.gameOver -= endGame;
+    }
+
+    private void endGame()
+    {
+        lifetimeServedText.text = lifeServedCustomers.ToString();
+        lifetimeAngeredText.text = lifeAngeredCustomers.ToString();
+        daysInServiceText.text = daysCompleted.ToString();
+        foodCookedText.text = lifeFoodCooked.ToString();
+        trashMadeText.text = lifeTrashCount.ToString();
+
+        gameOverScreen.SetActive(true);
     }
 
     //Once the day is over (triggered by end of clock) then update the data screen with the current variables
@@ -76,7 +109,13 @@ public class dayManager : MonoBehaviour
         }
         daysCompleted++;
         endOfDayScreen.SetActive(true);
+
+        //Add to lifetime stats before resetting
+        lifeServedCustomers += customersServed;
+        lifeAngeredCustomers += customersCameIn - customersServed;
+
         resetVars();
+       
     }
 
     //Resets all variables to their start values
@@ -87,12 +126,19 @@ public class dayManager : MonoBehaviour
         customersServed = 0;
         customersCameIn = 0; //How many customers came into the store?
         foodMade = 0;
-        daysCompleted = 0;
     }
 
     void createdFood(foodName food)
     {
-        foodMade++;
+        if(food == foodName.TRASH)
+        {
+            lifeTrashCount++;
+        }
+        else
+        {
+            foodMade++;
+            lifeFoodCooked++;
+        }
     }
 
     void servedCustomer(bool wasHappy)
@@ -108,6 +154,11 @@ public class dayManager : MonoBehaviour
     {
         dayReset?.Invoke();
         endOfDayScreen.SetActive(false);
+    }
+
+    public void returnToMenu()
+    {
+        SceneManager.LoadScene("TitleTentative");
     }
 
     // Update is called once per frame

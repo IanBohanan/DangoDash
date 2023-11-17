@@ -19,11 +19,13 @@ public class StardewClock : MonoBehaviour
     private void OnEnable()
     {
         dayManager.dayReset += startOfDay;
+        RepBar.gameOver += endGame;
     }
 
     private void OnDisable()
     {
         dayManager.dayReset -= startOfDay;
+        RepBar.gameOver -= endGame;
     }
 
     //When day reset, reset everything
@@ -31,6 +33,11 @@ public class StardewClock : MonoBehaviour
     {
         timeLeft = startTime;
         isTicking = true;
+    }
+
+    private void endGame()
+    {
+        isTicking = false;
     }
 
     // Start is called before the first frame update
