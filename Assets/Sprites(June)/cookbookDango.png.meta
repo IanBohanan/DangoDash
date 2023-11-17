@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cookbookDango_0: 9111817509117992685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

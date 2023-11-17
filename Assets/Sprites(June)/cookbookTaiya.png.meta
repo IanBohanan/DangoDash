@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cookbookTaiya_0: 7852114348650907227
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

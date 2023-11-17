@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cookbookStrawby_0: -5101303045698050454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
