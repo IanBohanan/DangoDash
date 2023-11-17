@@ -2,32 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class KitchenDoor : MonoBehaviour
+public class overworldJuiceM : MonoBehaviour
 {
-    public static event Action kitchenAreaOpened;
+    public static event Action drinkAreaOpened;
 
     private BoxCollider2D mouseCollider;
 
     [SerializeField]
-    private GameObject kitchenArea;
+    private GameObject drinkArea;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         mouseCollider = this.transform.gameObject.GetComponent<BoxCollider2D>();
     }
 
     private void OnEnable()
     {
-        overworldJuiceM.drinkAreaOpened += onMenuOpen;
+        KitchenDoor.kitchenAreaOpened += onMenuOpen;
         exitButtonCookingArea.kitchenAreaClosed += onMenuClose;
     }
 
     private void OnDisable()
     {
-        overworldJuiceM.drinkAreaOpened -= onMenuOpen;
+        KitchenDoor.kitchenAreaOpened -= onMenuOpen;
         exitButtonCookingArea.kitchenAreaClosed -= onMenuClose;
     }
-
 
     private void onMenuOpen()
     {
@@ -39,16 +39,11 @@ public class KitchenDoor : MonoBehaviour
         mouseCollider.enabled = true;
     }
 
-    //When clicked, transition
+
     private void OnMouseDown()
     {
-        kitchenAreaOpened?.Invoke();
-        kitchenArea.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        drinkAreaOpened?.Invoke();
+        drinkArea.SetActive(true);
+        mouseCollider.enabled = false;
     }
 }

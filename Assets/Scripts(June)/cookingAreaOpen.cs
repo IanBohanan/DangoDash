@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 
 public class cookingAreaOpen : MonoBehaviour
 {
+
     //stores the cookingArea to open/close
     public Animator foodAnim;
 
@@ -20,7 +21,6 @@ public class cookingAreaOpen : MonoBehaviour
     {
         cookingPot.outputFood += setFoodAnim;
     }
-
 
     //When object created (and enabled) unsubscribe to the customer when they left
     //Very important or else errors will happen!

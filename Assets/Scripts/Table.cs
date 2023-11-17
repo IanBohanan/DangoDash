@@ -7,6 +7,8 @@ public class Table : MonoBehaviour
 
     private Customer seatedCustomer; //What customer is seated at this table?
 
+    private BoxCollider2D mouseCollider;
+
     public enum TableState
     {
         EMPTY, //Table is waiting for customer
@@ -16,19 +18,41 @@ public class Table : MonoBehaviour
 
     public TableState state = TableState.EMPTY;
 
+    private void Start()
+    {
+        mouseCollider = this.transform.gameObject.GetComponent<BoxCollider2D>();
+    }
+
     void OnEnable()
     {
         StardewClock.dayOver += endOfDay;
+        overworldJuiceM.drinkAreaOpened += onMenuOpen;
+        exitButtonCookingArea.kitchenAreaClosed += onMenuClose;
+        KitchenDoor.kitchenAreaOpened += onMenuOpen;
     }
 
     private void OnDisable()
     {
         StardewClock.dayOver -= endOfDay;
+        overworldJuiceM.drinkAreaOpened -= onMenuOpen;
+        exitButtonCookingArea.kitchenAreaClosed -= onMenuClose;
+        KitchenDoor.kitchenAreaOpened -= onMenuOpen;
     }
+
 
     private void endOfDay()
     {
         free();
+    }
+
+    private void onMenuOpen()
+    {
+        mouseCollider.enabled = false;
+    }
+
+    private void onMenuClose()
+    {
+        mouseCollider.enabled = true;
     }
 
     public void seatCustomer(Customer r_customer)

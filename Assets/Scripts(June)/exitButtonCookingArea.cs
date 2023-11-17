@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class exitButtonCookingArea : MonoBehaviour
 {
-
+    public static event Action kitchenAreaClosed;
     [SerializeField]
     private GameObject tables;
     [SerializeField]
@@ -14,8 +14,8 @@ public class exitButtonCookingArea : MonoBehaviour
 
     private void OnMouseDown()
     {
+        kitchenAreaClosed?.Invoke();
         cookingArea.SetActive(false);
-        tables.SetActive(true);
         exampleAnim.sprite = null;
     }
 
