@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tempDango_0: -888961505568089924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
