@@ -500,6 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoReturn: 1
+  dragging: 0
 --- !u!114 &7479967649451306226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,6 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoReturn: 1
+  dragging: 0
 --- !u!114 &5018341651471912181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,7 +948,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3684c531a83bd5b44ad6de1897ac0b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cookArea: {fileID: 291883905401400232}
+  foodAnim: {fileID: 0}
+  renderer: {fileID: 0}
+  bobaSprite: {fileID: 0}
+  taiyakiSprite: {fileID: 0}
+  trashSprite: {fileID: 0}
 --- !u!1 &4546346908975177387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoReturn: 1
+  dragging: 0
 --- !u!1 &7542148228120577343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoReturn: 1
+  dragging: 0
 --- !u!114 &5353663452233592528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1632,6 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoReturn: 1
+  dragging: 0
 --- !u!114 &3600972646623861250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1747,6 +1756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoReturn: 1
+  dragging: 0
 --- !u!114 &5121875681058735261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1948,8 +1958,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fa18f729ed8934e94fadd32086f6f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cookingBar: {fileID: 0}
   ingredientCount: 0
   ingredientValue: 0
+  passedIngredient: {fileID: 0}
   connectedBay: {fileID: 5667144826920800958}
 --- !u!50 &4343742000963300352
 Rigidbody2D:

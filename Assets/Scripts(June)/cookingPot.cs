@@ -120,6 +120,15 @@ public class cookingPot : MonoBehaviour
             case 237:
                 outputFood?.Invoke(foodName.BOBA);
                 break;
+
+            case 179:
+                //outputFood?.Invoke(foodName.STRAWMOCHI);
+            break;
+
+            case 187:
+                //outputFood?.Invoke(foodName.DANGO);
+            break;
+
             default:
                 outputFood?.Invoke(foodName.TRASH);
                 break;
