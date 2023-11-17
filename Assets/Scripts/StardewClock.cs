@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class StardewClock : MonoBehaviour
 {
+    public static event Action dayOver; //Event signal when customer leaves the line. Sent out: int which spot in line they were
     public Image nightBackground;
     public RectTransform hand;
 
@@ -36,7 +38,7 @@ public class StardewClock : MonoBehaviour
         {
             //declare day done!
             isTicking = false;
-            
+            dayOver?.Invoke();
         }
     }
 
