@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodSpawnr : MonoBehaviour
+public class DrinkSpawner : MonoBehaviour
 {
     //The different spawners can hold a customer.
     private class Spawner
@@ -11,7 +11,7 @@ public class FoodSpawnr : MonoBehaviour
         public bool filled; //Whether there is a food in that spot or not
     }
 
-    public GameObject foodPrefab; //The customer prefab to spawn
+    public GameObject drinkPrefab; //The customer prefab to spawn
 
     [SerializeField]
     private List<Transform> spawnlocations; //Where should the customer spawn
@@ -19,14 +19,14 @@ public class FoodSpawnr : MonoBehaviour
 
     private void OnEnable()
     {
-        cookingPot.outputFood += attemptSpawnFood;
+        DrinkingCup.outputDrink+= attemptSpawnDrink;
         Food.leftCounter += freeLineSpot; //Subscribe to customer's sitting event so it can free a spot in line when customer leaves line
         dayManager.dayReset += initSpawnPoints; //Reset the food spawns
     }
 
     private void OnDisable()
     {
-        cookingPot.outputFood -= attemptSpawnFood;
+        DrinkingCup.outputDrink -= attemptSpawnDrink;
         Food.leftCounter -= freeLineSpot;
         dayManager.dayReset -= initSpawnPoints;
     }
@@ -52,16 +52,16 @@ public class FoodSpawnr : MonoBehaviour
     }
 
     //Attempts to spawn a customer in the first available spawner in spawnPoints
-    private void attemptSpawnFood(foodName foodMade)
+    private void attemptSpawnDrink(foodName drinkMade)
     {
         for (int i = 0; i < spawnPoints.Count; i++)
         {
             if (!spawnPoints[i].filled)
             {
-                GameObject newFood = Instantiate(foodPrefab, spawnPoints[i].point, Quaternion.identity); //Create the new customer object
+                GameObject newFood = Instantiate(drinkPrefab, spawnPoints[i].point, Quaternion.identity); //Create the new customer object
                 Food foodcomponent = newFood.transform.GetComponent<Food>();
                 foodcomponent.spotInLine = i; //Tell it which spot it was in line
-                foodcomponent.setName(foodMade);
+                foodcomponent.setName(drinkMade);
                 spawnPoints[i].filled = true;
                 return;
             }
@@ -72,7 +72,7 @@ public class FoodSpawnr : MonoBehaviour
     //Params: int spot - the spot in line that should be freed.
     private void freeLineSpot(int spot)
     {
-        if(spot >= 0)
+        if (spot >= 0)
         {
             spawnPoints[spot].filled = false;
         }

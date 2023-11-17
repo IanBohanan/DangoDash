@@ -14,6 +14,7 @@ using System;
 public class DrinkingCup : MonoBehaviour
 {
     public static event Action cupFilled;
+    public static event Action<foodName> outputDrink;
 
     private void Start()
     {
@@ -46,18 +47,18 @@ public class DrinkingCup : MonoBehaviour
         switch (drinkType)
         {
             case 0:
-                //outputFood?.Invoke(foodName.BOBATEA);
-                print("DrinkingCup: CUM CUP");
+                //outputDrink?.Invoke(foodName.BOBATEA);
+                //todo play sound
                 Destroy(gameObject);
                 break;
             case 1:
-                //outputFood?.Invoke(foodName.TAROTEA);
-                print("MERCURY CUP");
+                //outputDrink?.Invoke(foodName.TAROTEA);
+                //todo play sound
                 Destroy(gameObject);
                 break;
             case 2:
-                //outputFood?.Invoke(foodName.BROWNTEA);
-                print("POOP CUP");
+                //outputDrink?.Invoke(foodName.BROWNTEA);
+                //todo play sound
                 Destroy(gameObject);
                 break;
             default:

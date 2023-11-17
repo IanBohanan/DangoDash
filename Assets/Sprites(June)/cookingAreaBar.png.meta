@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cookingAreaBar_0: 510218138045890612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
