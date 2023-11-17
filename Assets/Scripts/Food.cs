@@ -20,6 +20,21 @@ public class Food : MonoBehaviour
     public Animator foodDisplay; //The animator that displays the food
     public int spotInLine = -1; //Where is its spot on the counter
 
+    void OnEnable()
+    {
+        StardewClock.dayOver += endOfDay;
+    }
+
+    private void OnDisable()
+    {
+        StardewClock.dayOver -= endOfDay;
+    }
+
+    private void endOfDay()
+    {
+        Destroy(this.transform.gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         try

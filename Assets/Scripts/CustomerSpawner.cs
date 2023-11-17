@@ -47,6 +47,7 @@ public class CustomerSpawner : MonoBehaviour
     {
         isTicking = true;
         timeLeft = timeUntilSpawn;
+        initSpawnPoints();
     }
 
     // Start is called before the first frame update
