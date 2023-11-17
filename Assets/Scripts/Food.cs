@@ -8,6 +8,8 @@ public enum foodName
 {
     BOBA,
     TAIYAKI,
+    STRAWMOCHI,
+    DANGO,
     TRASH
 }
 

@@ -122,11 +122,11 @@ public class cookingPot : MonoBehaviour
                 break;
 
             case 179:
-                //outputFood?.Invoke(foodName.STRAWMOCHI);
+                outputFood?.Invoke(foodName.STRAWMOCHI);
             break;
 
             case 187:
-                //outputFood?.Invoke(foodName.DANGO);
+                outputFood?.Invoke(foodName.DANGO);
             break;
 
             default:
