@@ -16,6 +16,30 @@ public class StardewClock : MonoBehaviour
 
     private bool isTicking = true; //Is the clock counting down?
 
+    private void OnEnable()
+    {
+        dayManager.dayReset += startOfDay;
+        RepBar.gameOver += endGame;
+    }
+
+    private void OnDisable()
+    {
+        dayManager.dayReset -= startOfDay;
+        RepBar.gameOver -= endGame;
+    }
+
+    //When day reset, reset everything
+    private void startOfDay()
+    {
+        timeLeft = startTime;
+        isTicking = true;
+    }
+
+    private void endGame()
+    {
+        isTicking = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

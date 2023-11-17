@@ -16,6 +16,21 @@ public class Table : MonoBehaviour
 
     public TableState state = TableState.EMPTY;
 
+    void OnEnable()
+    {
+        StardewClock.dayOver += endOfDay;
+    }
+
+    private void OnDisable()
+    {
+        StardewClock.dayOver -= endOfDay;
+    }
+
+    private void endOfDay()
+    {
+        free();
+    }
+
     public void seatCustomer(Customer r_customer)
     {
         state = TableState.SEATED;
@@ -32,6 +47,7 @@ public class Table : MonoBehaviour
     public void free()
     {
         state = TableState.EMPTY;
+        seatedCustomer = null;
     }
 
     // Update is called once per frame
