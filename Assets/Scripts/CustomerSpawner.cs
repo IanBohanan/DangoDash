@@ -1,9 +1,11 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomerSpawner : MonoBehaviour
 {
+
     //The different spawners can hold a customer.
     private class Spawner
     {
@@ -19,15 +21,34 @@ public class CustomerSpawner : MonoBehaviour
 
     public float timeUntilSpawn = 5.0f;
     public float timeLeft; //Time in seconds until something happens
+    private bool isTicking = true;
+
 
     private void OnEnable()
     {
         Customer.leftLine += freeLineSpot; //Subscribe to customer's sitting event so it can free a spot in line when customer leaves line
+        dayManager.dayReset += startOfDay;
+        StardewClock.dayOver += endOfDay;
     }
 
     private void OnDisable()
     {
         Customer.leftLine -= freeLineSpot;
+        dayManager.dayReset -= startOfDay;
+        StardewClock.dayOver -= endOfDay;
+    }
+
+    private void endOfDay()
+    {
+        isTicking = false;
+        timeLeft = timeUntilSpawn;
+    }
+
+    private void startOfDay()
+    {
+        isTicking = true;
+        timeLeft = timeUntilSpawn;
+        initSpawnPoints();
     }
 
     // Start is called before the first frame update
@@ -91,6 +112,9 @@ public class CustomerSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        updateTimer();
+        if(isTicking)
+        {
+            updateTimer();
+        }
     }
 }

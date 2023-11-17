@@ -6,6 +6,8 @@ using System;
 public class Customer : MonoBehaviour
 {
 
+    private int tablesTouched = 0;
+
     public static event Action<int> leftLine; //Event signal when customer leaves the line. Sent out: int which spot in line they were
 
     public int spotInLine; //Which spot in line did this customer take when it spawned?
@@ -33,6 +35,10 @@ public class Customer : MonoBehaviour
     [SerializeField]
     private GameObject thinkCloud; //The cloud gameObject that shows what the customer wants
     [SerializeField]
+    private GameObject tableIcon; //The table icon that shows a table when the customer is standing in line
+    [SerializeField]
+    private GameObject foodIcon; //The food icon that shows which food the customer wants (after they have already sat down)
+    [SerializeField]
     private Renderer cloudRenderer; //The cloud sprite object's renderer. Used to change its color
     [SerializeField]
     private Animator foodDisplay; //The animator that displays the desired food object
@@ -45,6 +51,23 @@ public class Customer : MonoBehaviour
     }
 
     public CustomerState state = CustomerState.WAITING;
+
+
+    private void OnEnable()
+    {
+        StardewClock.dayOver += endOfDay;
+    }
+
+    private void OnDisable()
+    {
+        StardewClock.dayOver -= endOfDay;
+    }
+
+    //At the end of the day, just vanish from existence.
+    private void endOfDay()
+    {
+        Destroy(this.transform.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +88,7 @@ public class Customer : MonoBehaviour
             if (hitObject.GetComponent<Table>() && state == CustomerState.WAITING)
             {
                 curTable = hitObject;
+                tablesTouched++;
             }
 
         }
@@ -84,7 +108,12 @@ public class Customer : MonoBehaviour
         {
             if (collision.transform.gameObject.GetComponent<Table>())
             {
-                curTable = null;
+                tablesTouched--;
+                if(tablesTouched <= 0)
+                {
+                    curTable = null;
+                    tablesTouched = 0;
+                }
             }
 
         }
@@ -107,8 +136,13 @@ public class Customer : MonoBehaviour
                 //Is the table they're trying to sit at already taken?
                 if (draggedTable.state == Table.TableState.EMPTY)
                 {
+                    //Update the icon to display their desired food 
+                    tableIcon.SetActive(false);
+                    foodIcon.SetActive(true);
+
                     //Table is empty! Have the customer sit in at the table.
                     sitAtTable(draggedTable);
+
                 }
                 else
                 {
@@ -122,6 +156,7 @@ public class Customer : MonoBehaviour
             }
             catch (Exception a) //If the customer was over a non-table
             {
+                print("Customer:I tried to sit, but I did not have curTable!");
                 tweenToLocation(lastValidCoords);
                 //Go back to spawn point
             }
@@ -173,9 +208,20 @@ public class Customer : MonoBehaviour
 
     private void leaveRestraunt()
     {
+
+        if(isHappy)
+        {
+            print("Customer was fed and satisfied!");
+        }
+        else
+        {
+            print("Customer ran out of time!");
+        }
+
         try
         {
             curTable.GetComponent<Table>().free();
+            print("Customer was at table!");
         }
         catch (Exception e) { }
         customerLeft?.Invoke(isHappy); //Tell reputation bar the customer left

@@ -20,6 +20,45 @@ public class Food : MonoBehaviour
     public Animator foodDisplay; //The animator that displays the food
     public int spotInLine = -1; //Where is its spot on the counter
 
+    private BoxCollider2D mouseCollider;
+
+    void Start()
+    {
+        mouseCollider = this.transform.gameObject.GetComponent<BoxCollider2D>();
+    }
+
+    void OnEnable()
+    {
+        StardewClock.dayOver += endOfDay;
+        overworldJuiceM.drinkAreaOpened += menuOpened;
+        exitButtonCookingArea.kitchenAreaClosed += onMenuClose;
+        KitchenDoor.kitchenAreaOpened += menuOpened;
+        
+    }
+
+    private void OnDisable()
+    {
+        StardewClock.dayOver -= endOfDay;
+        overworldJuiceM.drinkAreaOpened -= menuOpened;
+        exitButtonCookingArea.kitchenAreaClosed -= onMenuClose;
+        KitchenDoor.kitchenAreaOpened -= menuOpened;
+    }
+
+    private void endOfDay()
+    {
+        Destroy(this.transform.gameObject);
+    }
+
+    private void menuOpened()
+    {
+        mouseCollider.enabled = false;
+    }
+
+    private void onMenuClose()
+    {
+        mouseCollider.enabled = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         try
@@ -42,11 +81,6 @@ public class Food : MonoBehaviour
     {
         name = (foodName)UnityEngine.Random.Range(0, Enum.GetValues(typeof(foodName)).Cast<int>().Max());
         updateAnim();
-    }
-
-    public void Start()
-    {
-        
     }
 
     public void setName(foodName r_name)

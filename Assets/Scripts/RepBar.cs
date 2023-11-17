@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class RepBar : MonoBehaviour
 {
-
+    public static event Action gameOver; //Sent out when reputation reached zero
     private Slider slider;  //The visible slider component of the reputation bar
     public int reputation = 100;
 
@@ -15,7 +16,6 @@ public class RepBar : MonoBehaviour
     {
         Customer.customerLeft += onCustomerLeave;
     }
-
 
     //When object created (and enabled) unsubscribe to the customer when they left
     //Very important or else errors will happen!
@@ -51,6 +51,12 @@ public class RepBar : MonoBehaviour
     private void updateSlider()
     {
         slider.value = reputation;
+
+        if(reputation <= 0)
+        {
+            gameOver?.Invoke();
+        }
+
     }
 
     // Update is called once per frame

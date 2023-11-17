@@ -21,20 +21,20 @@ public class FoodSpawnr : MonoBehaviour
     {
         cookingPot.outputFood += attemptSpawnFood;
         Food.leftCounter += freeLineSpot; //Subscribe to customer's sitting event so it can free a spot in line when customer leaves line
+        dayManager.dayReset += initSpawnPoints; //Reset the food spawns
     }
 
     private void OnDisable()
     {
-        cookingPot.outputFood += attemptSpawnFood;
+        cookingPot.outputFood -= attemptSpawnFood;
         Food.leftCounter -= freeLineSpot;
+        dayManager.dayReset -= initSpawnPoints;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
         initSpawnPoints(); //Create the food spawn points
-
     }
 
     //Creates the spawn locations based on how many spawnLocations were given
