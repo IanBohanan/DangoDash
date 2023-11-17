@@ -3973,7 +3973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nightBackground: {fileID: 0}
   hand: {fileID: 863149948}
-  startTime: 30
+  startTime: 60
   timeLeft: 0
 --- !u!1001 &1395762652
 PrefabInstance:

@@ -24,6 +24,6 @@ public class MainMenuNewGameScript : MonoBehaviour
     void schmooveScenes()
     {
         //open the main game scene
-        SceneManager.LoadScene("TuutorialTentative");
+        SceneManager.LoadScene("SampleScene");
     }    
 }
