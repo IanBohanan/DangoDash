@@ -244,6 +244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11c4d06c9490444b8255f664903d141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoReturn: 1
+  dragging: 0
 --- !u!114 &5109683515083297576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +430,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0f07784ae8d544989bf53a54962708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tables: {fileID: 0}
   cookingArea: {fileID: 6561459131985430830}
+  exampleAnim: {fileID: 0}
 --- !u!1001 &6846041584390546054
 PrefabInstance:
   m_ObjectHideFlags: 0
