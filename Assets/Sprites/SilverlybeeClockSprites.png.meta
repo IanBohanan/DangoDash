@@ -118,6 +118,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -320,7 +344,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SilverlybeeClockSprites_0: 3916161694715487212
+      SilverlybeeClockSprites_1: 6819607112205206169
+      SilverlybeeClockSprites_2: -7575184264286520369
+      SilverlybeeClockSprites_3: 764543249813736248
+      SilverlybeeClockSprites_4: -3747529438033923234
+      SilverlybeeClockSprites_5: 7053014909835625580
+      SilverlybeeClockSprites_6: -1285154367186694352
+      SilverlybeeClockSprites_7: 9097845521804052387
+      SilverlybeeClockSprites_8: 6668378334662380452
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

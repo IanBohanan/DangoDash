@@ -7,7 +7,7 @@ public class cupStack : MonoBehaviour
 
 
     Vector3 mousePositionOffset;
-
+    public GameObject thesillycup;
 
     // Start is called before the first frame update
 
@@ -36,5 +36,16 @@ public class cupStack : MonoBehaviour
        
 
         newCup.GetComponent<ClickDragTest>().startDrag();
+
+
+        thesillycup = newCup;
     }
+
+    private void OnMouseUp()
+    {
+        thesillycup.GetComponent<DrinkingCup>().drinkMouseUp();
+        thesillycup.GetComponent<ClickDragTest>().altMouseUp();
+
+    }
+
 }

@@ -90,4 +90,9 @@ public class ClickDragTest : MonoBehaviour
         dragging = true;
         
     }
+
+    public void altMouseUp()
+    {
+        OnMouseUp();
+    }
 }
