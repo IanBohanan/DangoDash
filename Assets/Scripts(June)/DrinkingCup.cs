@@ -37,19 +37,17 @@ public class DrinkingCup : MonoBehaviour
         else
         {
             cupFilled?.Invoke();
-            print("Cup destroying by tossing1");
             Destroy(gameObject);
         }
     }
     public void generateDrink(int drinkType)
     {
         cupFilled?.Invoke();
-        print("Cup destroyed by filling!");
         switch (drinkType)
         {
             case 0:
                 //outputFood?.Invoke(foodName.BOBATEA);
-                print("CUM CUP");
+                print("DrinkingCup: CUM CUP");
                 Destroy(gameObject);
                 break;
             case 1:
