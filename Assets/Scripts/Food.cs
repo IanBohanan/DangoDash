@@ -6,7 +6,6 @@ using System.Linq;
 
 public enum foodName
 {
-    BOBA,
     TAIYAKI,
     STRAWMOCHI,
     DANGO,

@@ -2609,6 +2609,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1045181238759104467, guid: a2a77f097eccdd740a88e47a1bfa6e2a, type: 3}
     - target: {fileID: 7729929876710430098, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
+      propertyPath: dangoSprite
+      value: 
+      objectReference: {fileID: -888961505568089924, guid: 7374daa45326b4d419fefd0fe7f88271, type: 3}
+    - target: {fileID: 7729929876710430098, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
+      propertyPath: mochiSprite
+      value: 
+      objectReference: {fileID: 8631760784281092432, guid: 9c6fc2664fd7a5248851d531d0a4c924, type: 3}
+    - target: {fileID: 7729929876710430098, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: trashSprite
       value: 
       objectReference: {fileID: 21300000, guid: ad3cebbbc4c2b2d49bb6fbc3a41ea763, type: 3}

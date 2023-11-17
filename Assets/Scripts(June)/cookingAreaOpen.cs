@@ -12,8 +12,9 @@ public class cookingAreaOpen : MonoBehaviour
 
     public SpriteRenderer renderer;
 
-    public Sprite bobaSprite;
+    public Sprite mochiSprite;
     public Sprite taiyakiSprite;
+    public Sprite dangoSprite;
     public Sprite trashSprite;
 
     //When object created (and enabled) subscribe to the customer's leaving
@@ -36,11 +37,14 @@ public class cookingAreaOpen : MonoBehaviour
         
         switch(food)
         {
-            case foodName.BOBA:
-                renderer.sprite = bobaSprite;
+            case foodName.STRAWMOCHI:
+                renderer.sprite = mochiSprite;
                 break;
             case foodName.TAIYAKI:
                 renderer.sprite = taiyakiSprite;
+                break;
+            case foodName.DANGO:
+                renderer.sprite = dangoSprite;
                 break;
             default:
                 renderer.sprite = trashSprite;

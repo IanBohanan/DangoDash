@@ -117,9 +117,9 @@ public class cookingPot : MonoBehaviour
                 outputFood?.Invoke(foodName.TAIYAKI);
                 break;
             //temporary: Love + balls + milk = Boba
-            case 237:
-                outputFood?.Invoke(foodName.BOBA);
-                break;
+            //case 237:
+                //outputFood?.Invoke(foodName.BOBA);
+              //break;
 
             case 179:
                 outputFood?.Invoke(foodName.STRAWMOCHI);
