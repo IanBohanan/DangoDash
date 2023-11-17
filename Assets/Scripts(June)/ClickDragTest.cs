@@ -83,10 +83,7 @@ public class ClickDragTest : MonoBehaviour
 
     public void startDrag()
     {
-        //mousePositionOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);// + mousePositionOffset;
-        //mousePositionOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //lastValidCoords = transform.position;
+
         mousePositionOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         lastValidCoords = transform.position;
 
