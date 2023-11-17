@@ -52,6 +52,23 @@ public class Customer : MonoBehaviour
 
     public CustomerState state = CustomerState.WAITING;
 
+
+    private void OnEnable()
+    {
+        StardewClock.dayOver += endOfDay;
+    }
+
+    private void OnDisable()
+    {
+        StardewClock.dayOver -= endOfDay;
+    }
+
+    //At the end of the day, just vanish from existence.
+    private void endOfDay()
+    {
+        Destroy(this.transform.gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

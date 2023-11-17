@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class dayManager : MonoBehaviour
 {
+    public static event Action dayReset; //Sent out when the day is fully reset
+
     //Keep track of the day stats
-    [SerializeField]
     private int drinksServed = 0;
-    [SerializeField]
     private int customersServed = 0;
-    [SerializeField]
     private int customersCameIn = 0; //How many customers came into the store?
-    [SerializeField]
     private int foodMade = 0;
-    [SerializeField]
     private int daysCompleted = 0;
 
     //All the texts to change on the data screen
@@ -90,7 +88,7 @@ public class dayManager : MonoBehaviour
         customersCameIn = 0; //How many customers came into the store?
         foodMade = 0;
         daysCompleted = 0;
-}
+    }
 
     void createdFood(foodName food)
     {
@@ -104,6 +102,12 @@ public class dayManager : MonoBehaviour
         {
             customersServed++;
         }
+    }
+
+    public void restartDay()
+    {
+        dayReset?.Invoke();
+        endOfDayScreen.SetActive(false);
     }
 
     // Update is called once per frame
