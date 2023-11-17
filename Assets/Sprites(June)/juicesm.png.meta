@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 38328150f80032740b220c20f65c75a5
+guid: 3685c3453f47c3e41b5024f7f11128ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3660152007629181089
-    second: CookingArea_0
+      213: -3620904678983434689
+    second: juicesm_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CookingArea_0
+      name: juicesm_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 6
-        width: 354
-        height: 217
+        x: 0
+        y: 0
+        width: 40
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5f64513427843dc0800000000000000
-      internalID: -3660152007629181089
+      spriteID: f3e74abf066ffbdc0800000000000000
+      internalID: -3620904678983434689
       vertices: []
       indices: 
       edges: []

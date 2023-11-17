@@ -15,6 +15,7 @@ public class cookingPot : MonoBehaviour
     //tracks the number of ingredients currently in the pot; when this hits 3, a food is made
 
     //make all ingredientValues prime numbers for ease of addition
+    [SerializeField] cookingMeter cookingBar;
 
     public int ingredientCount = 0;
 
@@ -80,6 +81,8 @@ public class cookingPot : MonoBehaviour
 
         ingredientCount += 1;
 
+        cookingBar.setSprite(ingredientCount);
+
         //moves the ingredient back to its spot on the shelf
         try
         {
@@ -94,6 +97,8 @@ public class cookingPot : MonoBehaviour
 
         if (ingredientCount == 3)
         {
+
+
             mixIngredients();
         }
 
