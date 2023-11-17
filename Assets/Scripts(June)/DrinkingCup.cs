@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 //[SerializeField]
 //enum drinkType
@@ -12,6 +13,8 @@ using UnityEngine;
 //}
 public class DrinkingCup : MonoBehaviour
 {
+    public static event Action cupFilled;
+
     private void Start()
     {
         hasButton = false;
@@ -33,30 +36,36 @@ public class DrinkingCup : MonoBehaviour
         }
         else
         {
-            
+            cupFilled?.Invoke();
+            print("Cup destroying by tossing1");
             Destroy(gameObject);
         }
     }
     public void generateDrink(int drinkType)
     {
+        cupFilled?.Invoke();
+        print("Cup destroyed by filling!");
         switch (drinkType)
         {
             case 0:
                 //outputFood?.Invoke(foodName.BOBATEA);
+                print("CUM CUP");
                 Destroy(gameObject);
                 break;
             case 1:
                 //outputFood?.Invoke(foodName.TAROTEA);
+                print("MERCURY CUP");
                 Destroy(gameObject);
                 break;
             case 2:
                 //outputFood?.Invoke(foodName.BROWNTEA);
+                print("POOP CUP");
                 Destroy(gameObject);
                 break;
             default:
                 break;
         }
-
+        
     }
 
     public void drinkMouseUp()
