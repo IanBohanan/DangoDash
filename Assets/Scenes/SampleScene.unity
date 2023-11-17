@@ -3677,7 +3677,7 @@ SpriteRenderer:
   m_SortingLayerID: -504666071
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2651431102827825303, guid: 8c6ba9b10435ded429081d664cc8ac96, type: 3}
+  m_Sprite: {fileID: -5375652332239244216, guid: ccc3849228164eb4ab6f20dc83198d3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3973,7 +3973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nightBackground: {fileID: 0}
   hand: {fileID: 863149948}
-  startTime: 30
+  startTime: 60
   timeLeft: 0
 --- !u!1001 &1395762652
 PrefabInstance:
@@ -4240,7 +4240,7 @@ SpriteRenderer:
   m_SortingLayerID: -504666071
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4505162534903774407, guid: 862c73901ba69ac4e9b86e1ead0797a1, type: 3}
+  m_Sprite: {fileID: -5984342684877328557, guid: 9d1172a4965676747b849d823ab52dad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6121,7 +6121,7 @@ SpriteRenderer:
   m_SortingLayerID: -504666071
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4952043566522609014, guid: 2a57996633cf73044850821d0c51e617, type: 3}
+  m_Sprite: {fileID: -5984342684877328557, guid: 0f2f11054d457e44abf2dbc7f2ba16a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6141,7 +6141,7 @@ Transform:
   m_GameObject: {fileID: 2002222273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.46000004, y: -3.94, z: 0}
+  m_LocalPosition: {x: -0.46000004, y: -3.22, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6205,7 +6205,7 @@ SpriteRenderer:
   m_SortingLayerID: -504666071
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3689976161633313241, guid: 5889001895975004188f319592419d9e, type: 3}
+  m_Sprite: {fileID: -5984342684877328557, guid: 0fced664ca6ba264ba6584b53fefe7be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7451,7 +7451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &909203042704684355
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7628,11 +7628,23 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6105723994547956943}
         m_TargetAssemblyTypeName: PanelCloser, Assembly-CSharp
-        m_MethodName: ClosePanel
+        m_MethodName: goHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PanelCloser, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -12,7 +12,24 @@ public class exitButtonCookingArea : MonoBehaviour
 
     public SpriteRenderer exampleAnim;
 
+    private void OnEnable()
+    {
+        StardewClock.dayOver += closeKitchen;
+        RepBar.gameOver += closeKitchen;
+    }
+
+    private void OnDisable()
+    {
+        StardewClock.dayOver -= closeKitchen;
+        RepBar.gameOver -= closeKitchen;
+    }
+
     private void OnMouseDown()
+    {
+        closeKitchen();
+    }
+
+    private void closeKitchen()
     {
         kitchenAreaClosed?.Invoke();
         cookingArea.SetActive(false);

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PanelCloser : MonoBehaviour
 {
     public GameObject Panel;
@@ -16,4 +16,10 @@ public class PanelCloser : MonoBehaviour
             Button.SetActive(false);
         }
     }
+
+    public void goHome()
+    {
+        SceneManager.LoadScene("TitleTentative");
+    }
+
 }
