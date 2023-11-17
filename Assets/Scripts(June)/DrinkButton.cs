@@ -10,7 +10,7 @@ public class DrinkButton : MonoBehaviour
     //the drink contained in the machine with this button
     [SerializeField] GameObject containedDrink;
     //The position a cup in the machine with this button should be placed
-    [SerializeField] Vector3 cupPosition;
+    [SerializeField]public Vector3 associatedCupPosition;
     //The type of drink dispensed by this particular machine; may be moved to DrinkingCup, we'll see
     //0 = A, 1 = B, 2 = C
     [SerializeField] int dispensedLiquid;
@@ -19,7 +19,8 @@ public class DrinkButton : MonoBehaviour
 
     void Start()
     {
-        cupPosition = new Vector3(this.transform.position.x - 100, this.transform.position.y, this.transform.position.z);   
+        //cupPosition = new Vector3(this.transform.position.x - 100, this.transform.position.y, this.transform.position.z);   
+        //cup position should be 
     }
 
     void Update()
@@ -30,9 +31,10 @@ public class DrinkButton : MonoBehaviour
     public void setDrink(GameObject cup)
     {
         containedDrink = cup;
-
-        if (cup.GetComponent<DrinkingCup>().hasButton)
+        //print("drink set");
+        if (cup.GetComponent<DrinkingCup>().hasButton==true)
         {
+            print("cup switched buttons");
             cup.GetComponent<DrinkingCup>().associatedButton.hasCup = false;
         }
 
@@ -40,19 +42,32 @@ public class DrinkButton : MonoBehaviour
 
 
         //sets the drink's home point to here;
-        containedDrink.GetComponent<ClickDragTest>().setHome(cupPosition);
+        containedDrink.GetComponent<ClickDragTest>().setHome(associatedCupPosition);
 
         //snaps the drink to the base of the machine
-        containedDrink.transform.position = cupPosition;
+        containedDrink.transform.position = associatedCupPosition;
 
         hasCup = true;
         
       
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        associatedMachine.GetComponent<DrinkMachine>().machineTrigger(collision);
+    }
+
+    public void unsetDrink()
+    {
+        hasCup = false;
+        containedDrink.GetComponent<DrinkingCup>().hasButton = false;
+        //print("drink unset");
+    }
     //when the button sprite is pressed
     //animates the cup and ships it off to the serving screen
     private void OnMouseDown()
     {
+        print("button pressed");
         if (hasCup)
         {
             containedDrink.GetComponent<DrinkingCup>().generateDrink(dispensedLiquid);
