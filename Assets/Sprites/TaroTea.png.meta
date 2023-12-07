@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 41724e04a1af9ee448d4f45f40f1eaad
+guid: 89c120891ff165e4db4fc082b19a00da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8583143514647344931
-    second: brownFilledCup_0
+      213: -6131813958422874870
+    second: taroTea_0
+  - first:
+      213: -5025571478601541223
+    second: taroTea_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,41 +97,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brownFilledCup_0
+      name: taroTea_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 36
-        height: 60
+        x: 8
+        y: 5
+        width: 13
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +115,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd84f39e27c82e880800000000000000
-      internalID: -8583143514647344931
+      spriteID: a053c6b41bb67eaa0800000000000000
+      internalID: -6131813958422874870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taroTea_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 6
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 999de98ed55914ab0800000000000000
+      internalID: -5025571478601541223
       vertices: []
       indices: 
       edges: []
@@ -153,7 +153,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      brownFilledCup_0: -8583143514647344931
+      taroTea_0: -6131813958422874870
+      taroTea_1: -5025571478601541223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
