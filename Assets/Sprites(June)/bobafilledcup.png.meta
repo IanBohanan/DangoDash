@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 41724e04a1af9ee448d4f45f40f1eaad
+guid: 77afb777d77cfa648b619cea2fe390ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8583143514647344931
-    second: brownFilledCup_0
+      213: -7884050425023988217
+    second: bobafilledcup_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,41 +94,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brownFilledCup_0
+      name: bobafilledcup_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 52
         width: 36
-        height: 60
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd84f39e27c82e880800000000000000
-      internalID: -8583143514647344931
+      spriteID: 70e7d21f8e9369290800000000000000
+      internalID: -7884050425023988217
       vertices: []
       indices: 
       edges: []
@@ -153,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      brownFilledCup_0: -8583143514647344931
+      bobafilledcup_0: -7884050425023988217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
