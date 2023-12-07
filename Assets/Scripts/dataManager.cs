@@ -54,6 +54,9 @@ public class dayManager : MonoBehaviour
     [SerializeField]
     private GameObject gameOverScreen;
 
+    [SerializeField]private CustomerSpawner customerSpawner;
+
+
     private void Start()
     {
         startReputation = repBar.reputation;
@@ -130,7 +133,9 @@ public class dayManager : MonoBehaviour
     //Increases the difficulty for the next day.
     private void IncreaseDifficulty()
     {
+
         repBar.increaseMinReputation(10); //Increases minimum reputation by flat amount
+        customerSpawner.increaseDifficulty();
     }
 
     //Resets all variables to their start values
