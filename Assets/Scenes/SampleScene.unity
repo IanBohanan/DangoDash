@@ -5529,7 +5529,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fb6a444b711a94eb86fb38df2f0bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minRepSlider: {fileID: 1357421659}
   reputation: 100
+  minreputation: 0
   catsMeow: {fileID: 1637380083}
   happyCat: {fileID: 8300000, guid: 37c3651be05236b4dac5ee35394ec7ed, type: 3}
   sadCatTwT: {fileID: 8300000, guid: 7581a789a44aa8145b1d31c5b935d2f7, type: 3}
