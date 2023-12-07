@@ -8,7 +8,9 @@ public class RepBar : MonoBehaviour
 {
     public static event Action gameOver; //Sent out when reputation reached zero
     private Slider slider;  //The visible slider component of the reputation bar
+    [SerializeField] private Slider minRepSlider; //The red slider that shows min reputation required
     public int reputation = 100;
+    public int minreputation = 0; //The minimum reputation required before gameOver.
 
     //makes the silly little cat sounds to indicate their satisfaction
     [SerializeField] AudioSource catsMeow;
@@ -21,6 +23,7 @@ public class RepBar : MonoBehaviour
     //When object created (and enabled) subscribe to the customer's leaving
     private void OnEnable()
     {
+
         Customer.customerLeft += onCustomerLeave;
     }
 
@@ -64,9 +67,23 @@ public class RepBar : MonoBehaviour
     {
         slider.value = reputation;
 
-        if(reputation <= 0)
+        if(reputation < minreputation)
         {
             gameOver?.Invoke();
+        }
+
+    }
+
+    //Increases the minimum reputation needed to continue and updates the slider
+    //Note: it caps minimum reputation at 75% of the rep bar. This is for balancing reasons
+    public void increaseMinReputation(int amountToIncrease)
+    {
+        print("RepBar: Min reputation increased!");
+        if(minreputation < 75)
+        {
+            minreputation += amountToIncrease;
+            //Then update the slider
+            minRepSlider.value = minreputation;
         }
 
     }

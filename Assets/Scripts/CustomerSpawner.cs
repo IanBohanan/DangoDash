@@ -8,7 +8,6 @@ public class CustomerSpawner : MonoBehaviour
     //used to play the doorbell sound
     [SerializeField] AudioSource doorbell;
 
-
     //The different spawners can hold a customer.
     private class Spawner
     {
@@ -26,6 +25,11 @@ public class CustomerSpawner : MonoBehaviour
     public float timeLeft; //Time in seconds until something happens
     private bool isTicking = true;
 
+    //Difficulty-related vars that influence customer prefabs when spawned
+    private float customerLineTime = 20f; //How long customers will wait at the door
+    private float customerTableTime = 40f; //How long customers will wait at a table
+    private float customerMinSpawnTime = 7.0f; //How long to wait (minimum) until another customer comes in
+    private float customerMaxSpawnTime = 15.0f; //How long to wait (maximum) until another customer comes in
 
     private void OnEnable()
     {
@@ -59,7 +63,6 @@ public class CustomerSpawner : MonoBehaviour
     {
         timeLeft = timeUntilSpawn;
         initSpawnPoints(); //Create the customer spawn points
-
     }
 
     //Creates the spawn locations based on how many spawnLocations were given
@@ -85,8 +88,45 @@ public class CustomerSpawner : MonoBehaviour
 
         if (timeLeft <= 0.0f)
         {
-            timeLeft = timeUntilSpawn;
+            timeLeft = Random.Range(customerMinSpawnTime, customerMaxSpawnTime);
             attemptSpawnCustomer();
+        }
+    }
+
+    //Modifies one of the self-labeled "difficulty" variables to make game harder
+    public void increaseDifficulty()
+    {
+        int randomNumber = Random.Range(1, 5); //Random exlcudes the second number, so generates num from 1 to 4
+
+        switch (randomNumber)
+        {
+            case 1:
+                if(customerLineTime > 10.0f)
+                {
+                    customerLineTime -= 5f;
+                }
+                break;
+            case 2:
+                if (customerTableTime > 20.0f)
+                {
+                    customerLineTime -= 5f;
+                }
+                break;
+            case 3:
+                if(customerMinSpawnTime > 5.0f && customerMinSpawnTime < customerMaxSpawnTime)
+                {
+                    customerMinSpawnTime -= 1f;
+                }
+                break;
+            case 4:
+                if(customerMaxSpawnTime > 10.0f && customerMaxSpawnTime > customerMinSpawnTime)
+                {
+                    customerMaxSpawnTime -= 1f;
+                }
+                break;
+            default:
+                // code block
+                break;
         }
     }
     
@@ -97,8 +137,11 @@ public class CustomerSpawner : MonoBehaviour
         {
             if (!spawnPoints[i].filled)
             {
-                GameObject nextCustomer = Instantiate(customerPrefab, spawnPoints[i].point, Quaternion.identity); //Create the new customer object
-                nextCustomer.transform.GetComponent<Customer>().spotInLine = i; //Tell it which spot it was in line
+                GameObject nextCustomerObject = Instantiate(customerPrefab, spawnPoints[i].point, Quaternion.identity); //Create the new customer object
+                Customer nextCustomer = nextCustomerObject.transform.GetComponent<Customer>();
+                nextCustomer.spotInLine = i; //Tell it which spot it was in line
+                nextCustomer.lineTimer = customerLineTime;
+                nextCustomer.tableTimer = customerTableTime;
                 spawnPoints[i].filled = true;
                 doorbell.Play();
                 return;

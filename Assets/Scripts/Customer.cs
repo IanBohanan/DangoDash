@@ -72,7 +72,6 @@ public class Customer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         generateFood();
         timeLeft = lineTimer;
         lastValidCoords = transform.position;
