@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class cookingPot : MonoBehaviour
 {
 
+    //used to play audio upon successful cooking
+    [SerializeField] AudioSource soundsCooking;
 
     //prototype for unity actions
 
@@ -115,6 +117,9 @@ public class cookingPot : MonoBehaviour
             //example: flour + chocolate + milk = taiyaki
             case 139:
                 outputFood?.Invoke(foodName.TAIYAKI);
+
+                soundsCooking.Play();
+
                 break;
             //temporary: Love + balls + milk = Boba
             //case 237:
@@ -123,14 +128,26 @@ public class cookingPot : MonoBehaviour
 
             case 179:
                 outputFood?.Invoke(foodName.STRAWMOCHI);
-            break;
+
+                soundsCooking.Play();
+
+
+                break;
 
             case 187:
                 outputFood?.Invoke(foodName.DANGO);
-            break;
+
+                soundsCooking.Play();
+
+
+                break;
 
             default:
                 outputFood?.Invoke(foodName.TRASH);
+
+                soundsCooking.Play();
+
+
                 break;
         }
 

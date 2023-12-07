@@ -8,6 +8,8 @@ public class KitchenDoor : MonoBehaviour
 
     private BoxCollider2D mouseCollider;
 
+    [SerializeField] AudioSource kitchenOpen;
+
     [SerializeField]
     private GameObject kitchenArea;
 
@@ -42,6 +44,8 @@ public class KitchenDoor : MonoBehaviour
     //When clicked, transition
     private void OnMouseDown()
     {
+        kitchenOpen.Play();
+
         kitchenAreaOpened?.Invoke();
         kitchenArea.SetActive(true);
     }

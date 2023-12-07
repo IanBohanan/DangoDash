@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CustomerSpawner : MonoBehaviour
 {
+    //used to play the doorbell sound
+    [SerializeField] AudioSource doorbell;
+
 
     //The different spawners can hold a customer.
     private class Spawner
@@ -97,6 +100,7 @@ public class CustomerSpawner : MonoBehaviour
                 GameObject nextCustomer = Instantiate(customerPrefab, spawnPoints[i].point, Quaternion.identity); //Create the new customer object
                 nextCustomer.transform.GetComponent<Customer>().spotInLine = i; //Tell it which spot it was in line
                 spawnPoints[i].filled = true;
+                doorbell.Play();
                 return;
             }
         }
