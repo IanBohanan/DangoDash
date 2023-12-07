@@ -10,6 +10,13 @@ public class RepBar : MonoBehaviour
     private Slider slider;  //The visible slider component of the reputation bar
     public int reputation = 100;
 
+    //makes the silly little cat sounds to indicate their satisfaction
+    [SerializeField] AudioSource catsMeow;
+
+    [SerializeField] AudioClip happyCat;
+
+    [SerializeField] AudioClip sadCatTwT;
+
 
     //When object created (and enabled) subscribe to the customer's leaving
     private void OnEnable()
@@ -39,10 +46,15 @@ public class RepBar : MonoBehaviour
         if(wasHappy)
         {
             reputation += 10;
+
+            catsMeow.clip = happyCat;
+            catsMeow.Play();
         }
         else
         {
             reputation -= 10;
+            catsMeow.clip = sadCatTwT;
+            catsMeow.Play();
         }
         updateSlider();
     }
