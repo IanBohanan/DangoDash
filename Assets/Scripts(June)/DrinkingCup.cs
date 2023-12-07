@@ -47,17 +47,17 @@ public class DrinkingCup : MonoBehaviour
         switch (drinkType)
         {
             case 0:
-                //outputDrink?.Invoke(foodName.BOBATEA);
+                outputDrink?.Invoke(foodName.BOBATEA);
                 //todo play sound
                 Destroy(gameObject);
                 break;
             case 1:
-                //outputDrink?.Invoke(foodName.TAROTEA);
+                outputDrink?.Invoke(foodName.TAROTEA);
                 //todo play sound
                 Destroy(gameObject);
                 break;
             case 2:
-                //outputDrink?.Invoke(foodName.BROWNTEA);
+                outputDrink?.Invoke(foodName.BROWNTEA);
                 //todo play sound
                 Destroy(gameObject);
                 break;

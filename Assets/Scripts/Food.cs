@@ -9,6 +9,9 @@ public enum foodName
     TAIYAKI,
     STRAWMOCHI,
     DANGO,
+    BOBATEA,
+    TAROTEA,
+    BROWNTEA,
     TRASH
 }
 
