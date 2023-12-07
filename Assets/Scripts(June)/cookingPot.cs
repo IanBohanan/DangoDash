@@ -83,7 +83,7 @@ public class cookingPot : MonoBehaviour
 
         ingredientCount += 1;
 
-        cookingBar.setSprite(ingredientCount);
+        cookingBar.setSillySprite(ingredientCount);
 
         //moves the ingredient back to its spot on the shelf
         try

@@ -13,7 +13,7 @@ public class cookingMeter : MonoBehaviour
     [SerializeField]Sprite bar2;
 
 
-    public void setSprite(int spritenum)
+    public void setSillySprite(int spritenum)
     {
         if(spritenum == 1)
         {
