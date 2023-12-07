@@ -13,6 +13,9 @@ using System;
 //}
 public class DrinkingCup : MonoBehaviour
 {
+
+    [SerializeField] AudioSource cupSound;
+
     public static event Action cupFilled;
     public static event Action<foodName> outputDrink;
 
@@ -80,6 +83,7 @@ public class DrinkingCup : MonoBehaviour
                 break;
         }
         //todo play sound
+        cupSound.Play();
 
         //Let play admire drink for a second before pushing it away
         Invoke("pushAwayDrink", 1); 
