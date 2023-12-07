@@ -10,8 +10,6 @@ public class exitButtonCookingArea : MonoBehaviour
     [SerializeField]
     private GameObject cookingArea;
 
-    public SpriteRenderer exampleAnim;
-
     private void OnEnable()
     {
         StardewClock.dayOver += closeKitchen;
@@ -33,7 +31,6 @@ public class exitButtonCookingArea : MonoBehaviour
     {
         kitchenAreaClosed?.Invoke();
         cookingArea.SetActive(false);
-        exampleAnim.sprite = null;
     }
 
 

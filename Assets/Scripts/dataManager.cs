@@ -54,6 +54,9 @@ public class dayManager : MonoBehaviour
     [SerializeField]
     private GameObject gameOverScreen;
 
+    [SerializeField]private CustomerSpawner customerSpawner;
+
+
     private void Start()
     {
         startReputation = repBar.reputation;
@@ -113,9 +116,26 @@ public class dayManager : MonoBehaviour
         //Add to lifetime stats before resetting
         lifeServedCustomers += customersServed;
         lifeAngeredCustomers += customersCameIn - customersServed;
-
+        float customerSatisfactionPercent = (customersServed / customersCameIn) * 100;
         resetVars();
-       
+
+        //Then adjust difficulty for the next day. 
+        //If the player was able to get at least 75% correct customers served, then increase the minimum reputation
+        if (customerSatisfactionPercent >= 50)
+        {
+            
+            //if player was able to manage stated happy rating, increase the difficulty!
+            IncreaseDifficulty();
+        }
+        //Else do not increase difficulty
+    }
+
+    //Increases the difficulty for the next day.
+    private void IncreaseDifficulty()
+    {
+
+        repBar.increaseMinReputation(10); //Increases minimum reputation by flat amount
+        customerSpawner.increaseDifficulty();
     }
 
     //Resets all variables to their start values
