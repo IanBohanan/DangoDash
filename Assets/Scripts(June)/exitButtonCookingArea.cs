@@ -7,6 +7,7 @@ public class exitButtonCookingArea : MonoBehaviour
     //used to remove the text saying you have too much food
     [SerializeField] GameObject tooMuchFood;
 
+    public Animator foodAnim; //The flying out food anim
     public static event Action kitchenAreaClosed;
     [SerializeField]
     private GameObject tables;
