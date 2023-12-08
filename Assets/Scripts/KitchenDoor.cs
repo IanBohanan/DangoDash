@@ -54,7 +54,7 @@ public class KitchenDoor : MonoBehaviour
         kitchenAreaOpened?.Invoke();
         kitchenArea.SetActive(true);
 
-        if (foodSpawner.filledSpotCounter >= 3)
+        if (foodSpawner.filledSpotCounters >= 3)
         {
             //display the funny message
             tooMuchFood.SetActive(true);

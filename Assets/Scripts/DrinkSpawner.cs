@@ -53,6 +53,7 @@ public class DrinkSpawner : MonoBehaviour
 
 
     public int filledSpotCounter;
+    [SerializeField] GameObject tooMuchFoodText;
 
     //Attempts to spawn a customer in the first available spawner in spawnPoints
 
@@ -69,12 +70,22 @@ public class DrinkSpawner : MonoBehaviour
                 foodcomponent.spotInLine = i; //Tell it which spot it was in line
                 foodcomponent.setName(drinkMade);
                 spawnPoints[i].filled = true;
+
+                if (filledSpotCounter >= 3)
+                {
+                    tooMuchFoodText.SetActive(true);
+                }
+
                 return;
             }
 
             
         }
         filledSpotCounter++;
+        if (filledSpotCounter >= 3)
+        {
+            tooMuchFoodText.SetActive(true);
+        }
 
     }
 
