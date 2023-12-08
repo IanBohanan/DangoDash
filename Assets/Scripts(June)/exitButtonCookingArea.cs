@@ -30,7 +30,6 @@ public class exitButtonCookingArea : MonoBehaviour
 
     private void closeKitchen()
     {
-        foodAnim.Play("Hidden");
         kitchenAreaClosed?.Invoke();
         cookingArea.SetActive(false);
     }

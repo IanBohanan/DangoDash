@@ -8632,11 +8632,15 @@ MonoBehaviour:
   RepArrow: {fileID: 1947797956}
   Clock: {fileID: 1365213870}
   RepBar: {fileID: 1637380079}
+  FoodSpawner: {fileID: 0}
   customerPrefab: {fileID: 2407452227630154359, guid: 56fbe28ae0ca4e34f8e6e454193b0e34, type: 3}
   customerLocation: {fileID: 1358532872}
   kitchenArea: {fileID: 797805748}
   drinkArea: {fileID: 1060522615}
   curStage: 0
+  readTime: 1
+  isReading: 1
+  customerSatisfied: 0
 --- !u!4 &1604304266
 Transform:
   m_ObjectHideFlags: 0
@@ -11074,6 +11078,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1856644269
       objectReference: {fileID: 0}
+    - target: {fileID: 394383894230228008, guid: d8f1c480a7906414f97f3ec15bdfad10, type: 3}
+      propertyPath: foodAnim
+      value: 
+      objectReference: {fileID: 734838663}
     - target: {fileID: 2319308409367971511, guid: d8f1c480a7906414f97f3ec15bdfad10, type: 3}
       propertyPath: m_SortingLayer
       value: 6

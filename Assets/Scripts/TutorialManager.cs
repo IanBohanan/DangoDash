@@ -61,6 +61,8 @@ public class TutorialManager : MonoBehaviour
         Customer.leftLine += leftLine;
         Customer.customerLeft += leftRestraunt;
         exitButtonCookingArea.kitchenAreaClosed += closedKitchenOrDrinks;
+        KitchenDoor.kitchenAreaOpened += openedKitchen;
+        overworldJuiceM.drinkAreaOpened += openedDrinks;
     }
 
     private void OnDisable()
@@ -68,13 +70,33 @@ public class TutorialManager : MonoBehaviour
         Customer.leftLine -= leftLine;
         Customer.customerLeft -= leftRestraunt;
         exitButtonCookingArea.kitchenAreaClosed -= closedKitchenOrDrinks;
+        KitchenDoor.kitchenAreaOpened -= openedKitchen;
     }
 
     //Triggered when tutorial customer was fed
     public void fedCustomers(bool wasHappy)
     {
+        print("TutorialManager: Customer happy was " + wasHappy);
         customerSatisfied = wasHappy;
         goToNextStage();
+    }
+
+    private void openedKitchen()
+    {
+        if(curStage == Stages.WaitForKitchen)
+        {
+            goToNextStage();
+        }
+    }
+
+    private void openedDrinks()
+    {
+        print("TutorialManager: Drinks opened!");
+        if(curStage == Stages.WaitForDrinks)
+        {
+            print("TutorialManager: Showing tutorial stage for drinks");
+            goToNextStage();
+        }
     }
 
     private void resetReadTime()
@@ -161,6 +183,7 @@ public class TutorialManager : MonoBehaviour
                 }
             case Stages.ReadingKitchen:
                 {
+                    KitchenArrow.SetActive(false);
                     KitchenSlide.SetActive(false);
                     isReading = false;
                     curStage = Stages.MixingWhatever;
@@ -188,7 +211,7 @@ public class TutorialManager : MonoBehaviour
                 }
             case Stages.ReadingDrinks:
                 {
-
+                    DrinkArrow.SetActive(false);
                     isReading = false;
                     DrinkSlide.SetActive(false);
                     curStage = Stages.DrinkingWhatever;
@@ -218,9 +241,9 @@ public class TutorialManager : MonoBehaviour
                 }
             case Stages.LearningCustomers:
                 {
+                    print("Tutorial Manager: Spawning customer!");
                     isReading = false;
                     firstCustSlide.SetActive(false);
-
                     //Spawn customer
                     GameObject nextCustomerObject = Instantiate(customerPrefab, customerLocation.position, Quaternion.identity);
                     Customer nextCustomer = nextCustomerObject.GetComponent<Customer>();
@@ -246,6 +269,7 @@ public class TutorialManager : MonoBehaviour
                     //Check whetehr customer was satisfied
                     if (customerSatisfied)
                     {
+                        print("TutorialManager: Customer fed correctly!");
                         resetReadTime();
                         isReading = true;
                         Clock.SetActive(true);
@@ -255,6 +279,8 @@ public class TutorialManager : MonoBehaviour
                     }
                     else
                     {
+                        resetReadTime();
+                        print("TutorialManager: Customer fed wrong!");
                         WrongServeSlide.SetActive(true);
                         curStage = Stages.CustomerFedWrong;
                     }
@@ -265,6 +291,7 @@ public class TutorialManager : MonoBehaviour
                 }
             case Stages.CustomerFedWrong:
                 {
+                    WrongServeSlide.SetActive(false);
                     //Customer fed wrong, spawn another customer and go back two stages
                     isReading = false;
 
@@ -285,6 +312,7 @@ public class TutorialManager : MonoBehaviour
                     ClockArrow.SetActive(false);
                     CorrectServeSlide.SetActive(false);
                     RepBarSlide.SetActive(true);
+                    RepBar.SetActive(true);
                     RepArrow.SetActive(true);
 
                     curStage = Stages.ReadRepbar;
