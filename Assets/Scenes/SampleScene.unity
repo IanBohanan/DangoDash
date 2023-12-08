@@ -2382,6 +2382,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &797805752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797805748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3684c531a83bd5b44ad6de1897ac0b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodAnim: {fileID: 734838663}
+  renderer: {fileID: 734838662}
+  mochiSprite: {fileID: 8631760784281092432, guid: 9c6fc2664fd7a5248851d531d0a4c924, type: 3}
+  taiyakiSprite: {fileID: -314262122811554439, guid: a2a77f097eccdd740a88e47a1bfa6e2a, type: 3}
+  dangoSprite: {fileID: -888961505568089924, guid: 7374daa45326b4d419fefd0fe7f88271, type: 3}
+  trashSprite: {fileID: 21300000, guid: ad3cebbbc4c2b2d49bb6fbc3a41ea763, type: 3}
 --- !u!4 &850967175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1504520880017555541, guid: 353cc3cb366599a4499959e356a35351, type: 3}
@@ -2737,6 +2755,7 @@ PrefabInstance:
       objectReference: {fileID: 1175098968}
     m_RemovedComponents:
     - {fileID: 667004796505002550, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
+    - {fileID: 7729929876710430098, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4088565130898630314, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
     m_AddedGameObjects:
@@ -2759,6 +2778,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7329477270537653139, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       insertIndex: -1
       addedObject: {fileID: 797805751}
+    - targetCorrespondingSourceObject: {fileID: 7329477270537653139, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 797805752}
     - targetCorrespondingSourceObject: {fileID: 2722154161231588613, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       insertIndex: 4
       addedObject: {fileID: 856537171}
@@ -3711,6 +3733,7 @@ MonoBehaviour:
   foodCookedText: {fileID: 2069732655}
   trashMadeText: {fileID: 282431315}
   gameOverScreen: {fileID: 1115420228}
+  customerSpawner: {fileID: 0}
 --- !u!1 &1095267351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2517903791137871887, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
