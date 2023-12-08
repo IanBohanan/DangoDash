@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 51e44e90905c40246bcaa99036eff7d9
+guid: b98aa22fb6ae7284e81a2be8009fbd02
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3850874836991262440
-    second: comingSoonPane_0
+      213: -3124823641932933771
+    second: customizePane_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -23,12 +23,10 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -67,7 +65,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -98,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: comingSoonPane_0
+      name: customizePane_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 49
-        width: 1022
-        height: 582
+        x: 29
+        y: 29
+        width: 1512
+        height: 1022
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +109,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81145a21db1fe8ac0800000000000000
-      internalID: -3850874836991262440
+      spriteID: 57558d4247562a4d0800000000000000
+      internalID: -3124823641932933771
       vertices: []
       indices: 
       edges: []
@@ -128,10 +125,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      comingSoonPane_0: -3850874836991262440
-  mipmapLimitGroupName: 
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
