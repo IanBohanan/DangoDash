@@ -21,6 +21,7 @@ public class cookingAreaOpen : MonoBehaviour
     private void OnEnable()
     {
         cookingPot.outputFood += setFoodAnim;
+        foodAnim.Play("Hidden");
     }
 
     //When object created (and enabled) unsubscribe to the customer when they left
