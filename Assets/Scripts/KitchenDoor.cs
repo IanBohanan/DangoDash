@@ -4,6 +4,11 @@ using UnityEngine;
 using System;
 public class KitchenDoor : MonoBehaviour
 {
+
+    [SerializeField] GameObject tooMuchFood;
+
+    [SerializeField] FoodSpawnr foodSpawner;
+
     public static event Action kitchenAreaOpened;
 
     private BoxCollider2D mouseCollider;
@@ -48,6 +53,12 @@ public class KitchenDoor : MonoBehaviour
 
         kitchenAreaOpened?.Invoke();
         kitchenArea.SetActive(true);
+
+        if (foodSpawner.filledSpotCounter >= 3)
+        {
+            //display the funny message
+            tooMuchFood.SetActive(true);
+        }
     }
 
     // Update is called once per frame

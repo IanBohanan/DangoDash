@@ -51,20 +51,34 @@ public class FoodSpawnr : MonoBehaviour
         }
     }
 
+    //used to check if all of the spots are filled later
+    public int filledSpotCounter;
+
     //Attempts to spawn a customer in the first available spawner in spawnPoints
     private void attemptSpawnFood(foodName foodMade)
     {
+
+        filledSpotCounter = 0;
+
         for (int i = 0; i < spawnPoints.Count; i++)
         {
             if (!spawnPoints[i].filled)
             {
+                filledSpotCounter++;
                 GameObject newFood = Instantiate(foodPrefab, spawnPoints[i].point, Quaternion.identity); //Create the new customer object
                 Food foodcomponent = newFood.transform.GetComponent<Food>();
                 foodcomponent.spotInLine = i; //Tell it which spot it was in line
                 foodcomponent.setName(foodMade);
                 spawnPoints[i].filled = true;
+
+                
                 return;
             }
+
+
+            filledSpotCounter++;
+
+
         }
     }
 
@@ -75,6 +89,14 @@ public class FoodSpawnr : MonoBehaviour
         if(spot >= 0)
         {
             spawnPoints[spot].filled = false;
+            if (filledSpotCounter >= 3)
+            {
+                filledSpotCounter=2;
+            }
+            else
+            {
+                filledSpotCounter--;
+            }
         }
 
     }

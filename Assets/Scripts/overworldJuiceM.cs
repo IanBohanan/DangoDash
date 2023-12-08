@@ -4,6 +4,11 @@ using UnityEngine;
 using System;
 public class overworldJuiceM : MonoBehaviour
 {
+
+    [SerializeField] GameObject tooMuchFood;
+
+    [SerializeField] DrinkSpawner foodSpawner;
+
     public static event Action drinkAreaOpened;
 
     private BoxCollider2D mouseCollider;
@@ -45,5 +50,11 @@ public class overworldJuiceM : MonoBehaviour
         drinkAreaOpened?.Invoke();
         drinkArea.SetActive(true);
         mouseCollider.enabled = false;
+
+        if (foodSpawner.filledSpotCounter >= 3)
+        {
+            //display the funny message
+            tooMuchFood.SetActive(true);
+        }
     }
 }
