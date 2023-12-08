@@ -8,7 +8,7 @@ public class cupStack : MonoBehaviour
 
     Vector3 mousePositionOffset;
     public GameObject thesillycup;
-    private bool cupExists = false;
+    public bool cupExists = false;
     // Start is called before the first frame update
 
     public GameObject cupPrefab;
@@ -32,6 +32,8 @@ public class cupStack : MonoBehaviour
             GameObject newCup = Instantiate(cupPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 8), Quaternion.identity);
 
             newCup.GetComponent<ClickDragTest>().startDrag();
+
+            newCup.GetComponent<DrinkingCup>().stackOfCups = this;
 
             thesillycup = newCup;
 

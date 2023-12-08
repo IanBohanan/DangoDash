@@ -16,6 +16,8 @@ public class DrinkingCup : MonoBehaviour
 
     [SerializeField] AudioSource cupSound;
 
+    public cupStack stackOfCups;
+
     public static event Action cupFilled;
     public static event Action<foodName> outputDrink;
 
@@ -38,10 +40,26 @@ public class DrinkingCup : MonoBehaviour
     public Sprite taroTopImage;
     public Sprite brownTopTeaImage;
 
+
+    private void OnEnable()
+    {
+
+        exitButtonCookingArea.kitchenAreaClosed += deleteSelf;
+    }
+
+    //When object created (and enabled) unsubscribe to the customer when they left
+    //Very important or else errors will happen!
+    private void OnDisable()
+    {
+        exitButtonCookingArea.kitchenAreaClosed -= deleteSelf;
+    }
+
     private void Start()
     {
         hasButton = false;
     }
+
+    
 
     private void OnMouseUp()
     {
@@ -90,6 +108,8 @@ public class DrinkingCup : MonoBehaviour
 
     }
 
+    
+
     //Pushes the drink away then deletes it
     public void pushAwayDrink()
     {
@@ -102,6 +122,8 @@ public class DrinkingCup : MonoBehaviour
 
     public void deleteSelf()
     {
+        stackOfCups.cupExists = false;
+
         print("DrinkingCup: Cup deleted!");
         Destroy(gameObject);
 
