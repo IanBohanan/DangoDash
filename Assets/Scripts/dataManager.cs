@@ -116,8 +116,16 @@ public class dayManager : MonoBehaviour
         //Add to lifetime stats before resetting
         lifeServedCustomers += customersServed;
         lifeAngeredCustomers += customersCameIn - customersServed;
-        float customerSatisfactionPercent = (customersServed / customersCameIn) * 100;
-        resetVars();
+        float customerSatisfactionPercent;
+        if (customersServed == 0)
+        {
+            customersServed = 1;
+        }
+        if(customersCameIn == 0)
+        {
+            customersCameIn = 1;
+        }
+        customerSatisfactionPercent = (customersServed / customersCameIn) * 100;
 
         //Then adjust difficulty for the next day. 
         //If the player was able to get at least 75% correct customers served, then increase the minimum reputation
@@ -128,6 +136,7 @@ public class dayManager : MonoBehaviour
             IncreaseDifficulty();
         }
         //Else do not increase difficulty
+        resetVars();
     }
 
     //Increases the difficulty for the next day.

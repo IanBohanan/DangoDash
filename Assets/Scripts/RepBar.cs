@@ -48,7 +48,11 @@ public class RepBar : MonoBehaviour
     {
         if(wasHappy)
         {
-            reputation += 10;
+            if(reputation < 100)
+            {
+                reputation += 10;
+            }
+            
 
             catsMeow.clip = happyCat;
             catsMeow.Play();
