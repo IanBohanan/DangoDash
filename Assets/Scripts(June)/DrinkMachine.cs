@@ -25,7 +25,6 @@ public class DrinkMachine : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        print("trigger exit");
         //If the collided object is a cup
         if (collision.gameObject.GetComponent<DrinkingCup>())
         {

@@ -66,7 +66,7 @@ public class Customer : MonoBehaviour
     //At the end of the day, just vanish from existence.
     private void endOfDay()
     {
-        Destroy(this.transform.gameObject);
+        Destroy(gameObject);
     }
 
     // Start is called before the first frame update
