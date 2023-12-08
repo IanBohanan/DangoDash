@@ -92,20 +92,22 @@ public class FoodSpawnr : MonoBehaviour
 
     //Frees a spot in the spawnPoints list.
     //Params: int spot - the spot in line that should be freed.
-    private void freeLineSpot(int spot)
+    private void freeLineSpot(int spot,bool isDrink)
     {
-        if(spot >= 0)
+        if(!isDrink)
         {
-            spawnPoints[spot].filled = false;
-            if (filledSpotCounters >= 3)
+            if (spot >= 0)
             {
-                filledSpotCounters=2;
-            }
-            else
-            {
-                filledSpotCounters--;
+                spawnPoints[spot].filled = false;
+                if (filledSpotCounters >= 3)
+                {
+                    filledSpotCounters = 2;
+                }
+                else
+                {
+                    filledSpotCounters--;
+                }
             }
         }
-
     }
 }

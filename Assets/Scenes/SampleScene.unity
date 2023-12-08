@@ -7476,7 +7476,7 @@ MonoBehaviour:
   - {fileID: 1716657620}
   - {fileID: 666290348}
   filledSpotCounter: 0
-  tooMuchFoodText: {fileID: 0}
+  tooMuchFoodText: {fileID: 423752925}
 --- !u!1 &1786754629
 GameObject:
   m_ObjectHideFlags: 0

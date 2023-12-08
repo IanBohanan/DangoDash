@@ -17,12 +17,13 @@ public enum foodName
 
 public class Food : MonoBehaviour
 {
-    public static event Action<int> leftCounter;
+    public static event Action<int,bool> leftCounter;
 
     [SerializeField]
     public foodName name;
     public Animator foodDisplay; //The animator that displays the food
     public int spotInLine = -1; //Where is its spot on the counter
+    public bool isDrink = false;
 
     private BoxCollider2D mouseCollider;
 
@@ -71,7 +72,7 @@ public class Food : MonoBehaviour
             
             if(hitTable.state == Table.TableState.SEATED)
             {
-                leftCounter?.Invoke(spotInLine);
+                leftCounter?.Invoke(spotInLine, isDrink);
                 hitTable.receiveFood(this);
                 Destroy(transform.gameObject);
             }
@@ -98,6 +99,11 @@ public class Food : MonoBehaviour
         try
         {
             foodDisplay.SetInteger("FoodNum", (int)name); //Display the correct food
+
+            if((int)name > 2 && (int)name != 6)
+            {
+                isDrink = true;
+            }
         }
         catch (Exception e) { }
         
