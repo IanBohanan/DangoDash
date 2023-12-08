@@ -74,6 +74,7 @@ public class FoodSpawnr : MonoBehaviour
 
                 if (filledSpotCounters >= 3)
                 {
+                    print("FoodSpawner: Too much food! SPawning text!");
                     tooMuchFoodText.SetActive(true);
                 }
                 return;

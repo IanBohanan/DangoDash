@@ -5866,7 +5866,8 @@ MonoBehaviour:
   - {fileID: 1007763588}
   - {fileID: 1023991479}
   - {fileID: 1602017098}
-  filledSpotCounter: 0
+  filledSpotCounters: 0
+  tooMuchFoodText: {fileID: 402210500}
 --- !u!1001 &1417094446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7475,6 +7476,7 @@ MonoBehaviour:
   - {fileID: 1716657620}
   - {fileID: 666290348}
   filledSpotCounter: 0
+  tooMuchFoodText: {fileID: 0}
 --- !u!1 &1786754629
 GameObject:
   m_ObjectHideFlags: 0
