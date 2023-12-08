@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 3154b29455dc8994cb646be6255b1dba
+  - enabled: 1
+    path: Assets/Scenes/openingAnimatic.unity
+    guid: 9ff4b24124aca3446a944004535a9016
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

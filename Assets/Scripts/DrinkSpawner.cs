@@ -51,7 +51,12 @@ public class DrinkSpawner : MonoBehaviour
         }
     }
 
+
+    public int filledSpotCounter;
+    [SerializeField] GameObject tooMuchFoodText;
+
     //Attempts to spawn a customer in the first available spawner in spawnPoints
+
     private void attemptSpawnDrink(foodName drinkMade)
     {
         print("DrinkerSpawner: Spawned drink on counter!");
@@ -59,14 +64,29 @@ public class DrinkSpawner : MonoBehaviour
         {
             if (!spawnPoints[i].filled)
             {
+                filledSpotCounter++;
                 GameObject newFood = Instantiate(drinkPrefab, spawnPoints[i].point, Quaternion.identity); //Create the new customer object
                 Food foodcomponent = newFood.transform.GetComponent<Food>();
                 foodcomponent.spotInLine = i; //Tell it which spot it was in line
                 foodcomponent.setName(drinkMade);
                 spawnPoints[i].filled = true;
+
+                if (filledSpotCounter >= 3)
+                {
+                    tooMuchFoodText.SetActive(true);
+                }
+
                 return;
             }
+
+            
         }
+        filledSpotCounter++;
+        if (filledSpotCounter >= 3)
+        {
+            tooMuchFoodText.SetActive(true);
+        }
+
     }
 
     //Frees a spot in the spawnPoints list.
@@ -76,6 +96,14 @@ public class DrinkSpawner : MonoBehaviour
         if (spot >= 0)
         {
             spawnPoints[spot].filled = false;
+            if (filledSpotCounter >= 3)
+            {
+                filledSpotCounter = 2;
+            }
+            else
+            {
+                filledSpotCounter--;
+            }
         }
 
     }

@@ -4,6 +4,9 @@ using UnityEngine;
 using System;
 public class exitButtonCookingArea : MonoBehaviour
 {
+    //used to remove the text saying you have too much food
+    [SerializeField] GameObject tooMuchFood;
+
     public Animator foodAnim; //The flying out food anim
     public static event Action kitchenAreaClosed;
     [SerializeField]
@@ -25,11 +28,13 @@ public class exitButtonCookingArea : MonoBehaviour
 
     private void OnMouseDown()
     {
+        
         closeKitchen();
     }
 
     private void closeKitchen()
     {
+        tooMuchFood.SetActive(false);
         kitchenAreaClosed?.Invoke();
         cookingArea.SetActive(false);
     }
@@ -46,4 +51,5 @@ public class exitButtonCookingArea : MonoBehaviour
     {
 
     }
+
 }
