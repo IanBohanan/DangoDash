@@ -2720,7 +2720,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.85, y: 0.73, z: -2}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1592766580}
@@ -2955,9 +2955,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodAnim: {fileID: 734838663}
   renderer: {fileID: 734838662}
-  mochiSprite: {fileID: 8631760784281092432, guid: 9c6fc2664fd7a5248851d531d0a4c924, type: 3}
+  mochiSprite: {fileID: 21300000, guid: 9c6fc2664fd7a5248851d531d0a4c924, type: 3}
   taiyakiSprite: {fileID: -314262122811554439, guid: a2a77f097eccdd740a88e47a1bfa6e2a, type: 3}
-  dangoSprite: {fileID: -888961505568089924, guid: 7374daa45326b4d419fefd0fe7f88271, type: 3}
+  dangoSprite: {fileID: 21300000, guid: 7374daa45326b4d419fefd0fe7f88271, type: 3}
   trashSprite: {fileID: 21300000, guid: ad3cebbbc4c2b2d49bb6fbc3a41ea763, type: 3}
 --- !u!4 &797805753 stripped
 Transform:
@@ -3267,7 +3267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329477270537653139, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7396255055473561648, guid: ff0cf651edcae604fac96444abb0e395, type: 3}
       propertyPath: m_LocalPosition.x
