@@ -7,6 +7,6 @@ public class TutorialBtn : MonoBehaviour
 {
     public void goToTutorial()
     {
-        SceneManager.LoadScene("TuutorialTentative");
+        SceneManager.LoadScene("InteractiveTutorial");
     }
 }
