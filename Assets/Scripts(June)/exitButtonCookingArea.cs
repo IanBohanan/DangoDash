@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 public class exitButtonCookingArea : MonoBehaviour
 {
+    public Animator foodAnim; //The flying out food anim
     public static event Action kitchenAreaClosed;
     [SerializeField]
     private GameObject tables;
@@ -29,6 +30,7 @@ public class exitButtonCookingArea : MonoBehaviour
 
     private void closeKitchen()
     {
+        foodAnim.Play("Hidden");
         kitchenAreaClosed?.Invoke();
         cookingArea.SetActive(false);
     }
