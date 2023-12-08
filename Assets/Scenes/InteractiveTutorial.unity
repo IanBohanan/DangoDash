@@ -3914,7 +3914,7 @@ RectTransform:
   m_Father: {fileID: 1637380080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.237, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5848,7 +5848,7 @@ RectTransform:
   m_Father: {fileID: 1637380080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7427,7 +7427,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 23.7
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7531,7 +7531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1365213871
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7561,7 +7561,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365213870}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc01d0a187f6c1d41ba7beae2abd7b7b, type: 3}
   m_Name: 
@@ -8617,6 +8617,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86bca9d0a6c95428ff3e6a1355b938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSlide: {fileID: 681604477}
+  KitchenSlide: {fileID: 1852477399}
+  DrinkSlide: {fileID: 1989053589}
+  SpaceSlide: {fileID: 1020814731}
+  firstCustSlide: {fileID: 2062229720}
+  WrongServeSlide: {fileID: 1374433972}
+  CorrectServeSlide: {fileID: 1696407203}
+  RepBarSlide: {fileID: 655991463}
+  finalSlide: {fileID: 1058927763}
+  KitchenArrow: {fileID: 1472407032}
+  DrinkArrow: {fileID: 806657607}
+  ClockArrow: {fileID: 2081955556}
+  RepArrow: {fileID: 1947797956}
+  Clock: {fileID: 1365213870}
+  RepBar: {fileID: 1637380079}
+  customerPrefab: {fileID: 2407452227630154359, guid: 56fbe28ae0ca4e34f8e6e454193b0e34, type: 3}
+  customerLocation: {fileID: 1358532872}
+  kitchenArea: {fileID: 797805748}
+  drinkArea: {fileID: 1060522615}
+  curStage: 0
 --- !u!4 &1604304266
 Transform:
   m_ObjectHideFlags: 0
@@ -8929,7 +8949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1637380080
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12540,7 +12560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2051162465
 Transform:
   m_ObjectHideFlags: 0
@@ -12566,7 +12586,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051162464}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93aec28f08983b44e9112b8343d1f747, type: 3}
   m_Name: 
