@@ -28,8 +28,8 @@ public class CustomerSpawner : MonoBehaviour
     //Difficulty-related vars that influence customer prefabs when spawned
     private float customerLineTime = 20f; //How long customers will wait at the door
     private float customerTableTime = 40f; //How long customers will wait at a table
-    private float customerMinSpawnTime = 7.0f; //How long to wait (minimum) until another customer comes in
-    private float customerMaxSpawnTime = 15.0f; //How long to wait (maximum) until another customer comes in
+    private float customerMinSpawnTime = 6.0f; //How long to wait (minimum) until another customer comes in
+    private float customerMaxSpawnTime = 10.0f; //How long to wait (maximum) until another customer comes in
 
     private void OnEnable()
     {
@@ -113,13 +113,13 @@ public class CustomerSpawner : MonoBehaviour
                 }
                 break;
             case 3:
-                if(customerMinSpawnTime > 5.0f && customerMinSpawnTime < customerMaxSpawnTime)
+                if(customerMinSpawnTime > 3.0f && customerMinSpawnTime < customerMaxSpawnTime)
                 {
                     customerMinSpawnTime -= 1f;
                 }
                 break;
             case 4:
-                if(customerMaxSpawnTime > 10.0f && customerMaxSpawnTime > customerMinSpawnTime)
+                if(customerMaxSpawnTime > 5.0f && customerMaxSpawnTime > customerMinSpawnTime)
                 {
                     customerMaxSpawnTime -= 1f;
                 }
