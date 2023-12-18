@@ -386,28 +386,34 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Coders.........Sohpie Stephenson, AhoyItsPhil, June
+  m_text: 'Coders.........................................................................Sophie
+    Stephenson, AhoyItsPhil, June
 
-    Artists.....Sophie
+    Artists...................................Sophie
     Stephenson, Tatiana Padgett, Emalee Dunbar
 
-    SFX
+    SFX.........................................................................................................................................................Niko
+    Dever
 
-    Project Manager
+    Project Manager.......................................................................................................................Niko
+    Dever
 
-    Project
-    Director
+    Project Director..........................................................................................................Emmalee
+    Dunbar
 
-    Art Director
+    Art Director.......................................................................................................................Tatiana
+    Padget
 
-    Lead Coder
+    Lead Coder..................................................................................................................................AhoyItsPhil
 
-    Vice Coder
+    Vice
+    Coder......................................................................................................................................................June
 
-    Animator
+    Animator.............................................................................................................................Tatiana
+    Padgett
 
-    Voice
-    actors'
+    Voice actors..........................................Syn(toe eater),
+    Purin the cat, Jovie the cat'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce4244a3f906d284bbe0c5dcf666b412, type: 2}
   m_sharedMaterial: {fileID: -7033266705298925498, guid: ce4244a3f906d284bbe0c5dcf666b412, type: 2}
