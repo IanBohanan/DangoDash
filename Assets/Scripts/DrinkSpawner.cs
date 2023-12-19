@@ -17,6 +17,10 @@ public class DrinkSpawner : MonoBehaviour
     private List<Transform> spawnlocations; //Where should the customer spawn
     private List<Spawner> spawnPoints; //The actual spawn points used to create the customer line
 
+
+    public int filledSpotCounter = 0;
+    [SerializeField] GameObject tooMuchFoodText;
+
     private void OnEnable()
     {
         DrinkingCup.outputDrink+= attemptSpawnDrink;
@@ -41,6 +45,7 @@ public class DrinkSpawner : MonoBehaviour
     //Makes them all empty and assigns them locations based on each spawnLocation
     private void initSpawnPoints()
     {
+        filledSpotCounter = 0;
         spawnPoints = new List<Spawner>();
         foreach (Transform loc in spawnlocations)
         {
@@ -51,14 +56,11 @@ public class DrinkSpawner : MonoBehaviour
         }
     }
 
-
-    public int filledSpotCounter;
-    [SerializeField] GameObject tooMuchFoodText;
-
     //Attempts to spawn a customer in the first available spawner in spawnPoints
 
     private void attemptSpawnDrink(foodName drinkMade)
     {
+        filledSpotCounter = 0;
         print("DrinkerSpawner: Spawned drink on counter!");
         for (int i = 0; i < spawnPoints.Count; i++)
         {

@@ -17,6 +17,10 @@ public class FoodSpawnr : MonoBehaviour
     private List<Transform> spawnlocations; //Where should the customer spawn
     private List<Spawner> spawnPoints; //The actual spawn points used to create the customer line
 
+    //used to check if all of the spots are filled later
+    public int filledSpotCounters = 0;
+    [SerializeField] GameObject tooMuchFoodText;
+
     private void OnEnable()
     {
         cookingPot.outputFood += attemptSpawnFood;
@@ -41,6 +45,7 @@ public class FoodSpawnr : MonoBehaviour
     //Makes them all empty and assigns them locations based on each spawnLocation
     private void initSpawnPoints()
     {
+        filledSpotCounters = 0;
         spawnPoints = new List<Spawner>();
         foreach (Transform loc in spawnlocations)
         {
@@ -50,10 +55,6 @@ public class FoodSpawnr : MonoBehaviour
             spawnPoints.Add(curSpawner);
         }
     }
-
-    //used to check if all of the spots are filled later
-    public int filledSpotCounters;
-    [SerializeField] GameObject tooMuchFoodText;
 
     //Attempts to spawn a customer in the first available spawner in spawnPoints
     private void attemptSpawnFood(foodName foodMade)
